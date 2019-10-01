@@ -1,0 +1,15 @@
+C:\Users\maxpr\Documents\NHL\2019-2020\memoryProject\concept\Concept\Concept\bin\Debug\Concept.exe.config
+C:\Users\maxpr\Documents\NHL\2019-2020\memoryProject\concept\Concept\Concept\bin\Debug\Concept.exe
+C:\Users\maxpr\Documents\NHL\2019-2020\memoryProject\concept\Concept\Concept\bin\Debug\Concept.pdb
+C:\Users\maxpr\Documents\NHL\2019-2020\memoryProject\concept\Concept\Concept\obj\Debug\Concept.csprojAssemblyReference.cache
+C:\Users\maxpr\Documents\NHL\2019-2020\memoryProject\concept\Concept\Concept\obj\Debug\MainWindow.g.cs
+C:\Users\maxpr\Documents\NHL\2019-2020\memoryProject\concept\Concept\Concept\obj\Debug\App.g.cs
+C:\Users\maxpr\Documents\NHL\2019-2020\memoryProject\concept\Concept\Concept\obj\Debug\Concept_MarkupCompile.cache
+C:\Users\maxpr\Documents\NHL\2019-2020\memoryProject\concept\Concept\Concept\obj\Debug\Concept_MarkupCompile.lref
+C:\Users\maxpr\Documents\NHL\2019-2020\memoryProject\concept\Concept\Concept\obj\Debug\MainWindow.baml
+C:\Users\maxpr\Documents\NHL\2019-2020\memoryProject\concept\Concept\Concept\obj\Debug\Concept.g.resources
+C:\Users\maxpr\Documents\NHL\2019-2020\memoryProject\concept\Concept\Concept\obj\Debug\Concept.Properties.Resources.resources
+C:\Users\maxpr\Documents\NHL\2019-2020\memoryProject\concept\Concept\Concept\obj\Debug\Concept.csproj.GenerateResource.cache
+C:\Users\maxpr\Documents\NHL\2019-2020\memoryProject\concept\Concept\Concept\obj\Debug\Concept.csproj.CoreCompileInputs.cache
+C:\Users\maxpr\Documents\NHL\2019-2020\memoryProject\concept\Concept\Concept\obj\Debug\Concept.exe
+C:\Users\maxpr\Documents\NHL\2019-2020\memoryProject\concept\Concept\Concept\obj\Debug\Concept.pdb
