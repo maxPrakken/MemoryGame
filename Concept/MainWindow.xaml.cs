@@ -42,18 +42,48 @@ namespace Concept
             int lastEven = 0;
             for (int i = 0; i < size * size; i++)
             {
-                int type = -1;
-                if(lastEven % 2 != 0)
-                {
-                    type = lastEven - 1;
-                }
-                else { type = lastEven; }
-                lastEven++;
-                Card btn = new Card(lastEven, wp.Width, size);
+                int type = i / 2; // set type
+                
+                Card btn = new Card(type, wp.Width, size);
                 wp.Children.Add(btn);
             }
+
+            RandomOrder();
+
             this.Content = wp;
             this.Show();
+        }
+
+        public void RandomOrder()
+        {
+            List<Card> cl = new List<Card>();
+
+            foreach(Card c in wp.Children)
+            {
+                cl.Add(c);
+            }
+            ShuffleCards(cl);
+
+            wp.Children.Clear();
+
+            foreach(Card ca in cl)
+            {
+                wp.Children.Add(ca);
+            }
+        }
+
+        private static Random rng = new Random();
+        public static void ShuffleCards<T>(IList<T> list)
+        {
+            int n = list.Count;
+            while (n > 1)
+            {
+                n--;
+                int k = rng.Next(n + 1);
+                T value = list[k];
+                list[k] = list[n];
+                list[n] = value;
+            }
         }
     }
 
@@ -67,6 +97,7 @@ namespace Concept
             Content = "test";
             Width = 50;
             Height = 50;
+            this.Click += button1_Click; // subscribes the click event to a function
         }
         public Card(int type, double width, int size)
         {
@@ -74,6 +105,12 @@ namespace Concept
             Content = "test";
             Width = width / size;
             Height = width / size;
+            this.Click += button1_Click; // subscribes the click event to a function
+        }
+
+        private void button1_Click(object sender, RoutedEventArgs e)
+        {
+            this.Content = type;
         }
     }
 }
