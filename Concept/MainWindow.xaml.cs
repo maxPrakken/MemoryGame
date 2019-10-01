@@ -20,16 +20,16 @@ namespace Concept
     /// </summary>
     public partial class MainWindow : Window
     {
-        WrapPanel wp = new WrapPanel();
+        WrapPanel wp = new WrapPanel(); // initialise wrap panel
 
-        public MainWindow()
+        public MainWindow() // main function
         {
-            InitializeComponent();
+            InitializeComponent(); // no clue what it does but dont remove it
 
-            wp.Width = 500;
-            wp.Height = 500;
+            wp.Width = 500; // set wrappanel width
+            wp.Height = 500; // set wrappanel height
 
-            CreateGrid(4);
+            CreateGrid(4); // create grid with set size, give it a even number or it'll throw an exception
         }
 
         public void CreateGrid(int size) // give even number
@@ -39,78 +39,77 @@ namespace Concept
                 throw new System.ArgumentException("give a even number for the grid");
             }
 
-            int lastEven = 0;
-            for (int i = 0; i < size * size; i++)
+            for (int i = 0; i < size * size; i++) // loop the amount of the size * size so you get a even grid
             {
                 int type = i / 2; // set type
                 
-                Card btn = new Card(type, wp.Width, size);
-                wp.Children.Add(btn);
+                Card btn = new Card(type, wp.Width, size); // initialize class Card, Card derives from Button
+                wp.Children.Add(btn); // add the card to the  wrappanel
             }
 
-            RandomOrder();
+            RandomOrder(); // give the wrappanel a random order
 
-            this.Content = wp;
-            this.Show();
+            this.Content = wp; // give wrappanel to the content
+            this.Show(); // show the content
         }
 
-        public void RandomOrder()
+        public void RandomOrder() // function that empties and fills the wrappanel for randomisation
         {
-            List<Card> cl = new List<Card>();
+            List<Card> cl = new List<Card>(); // list to hold the cards in temporary
 
-            foreach(Card c in wp.Children)
+            foreach(Card c in wp.Children) // loop through wrappanel children
             {
-                cl.Add(c);
+                cl.Add(c); // add child to temporary list
             }
-            ShuffleCards(cl);
+            ShuffleCards(cl); // call shufflecards function
 
-            wp.Children.Clear();
+            wp.Children.Clear(); // empty all children from wrappanel
 
-            foreach(Card ca in cl)
+            foreach(Card ca in cl) // loop through cards in list
             {
-                wp.Children.Add(ca);
+                wp.Children.Add(ca); // add children back to wrappanel but now shuffled
             }
         }
 
-        private static Random rng = new Random();
-        public static void ShuffleCards<T>(IList<T> list)
+        private static Random rng = new Random(); // initialize RNJezus
+        public static void ShuffleCards<T>(IList<T> list) // function that shuffles cards
         {
-            int n = list.Count;
-            while (n > 1)
+            int n = list.Count; // size of list
+            while (n > 1) // loop through list till at end
             {
-                n--;
-                int k = rng.Next(n + 1);
-                T value = list[k];
-                list[k] = list[n];
-                list[n] = value;
+                n--; // lower the counter
+                int k = rng.Next(n + 1); //get new random order
+                T value = list[k]; // put Card in new index
+                list[k] = list[n]; // give Card new value
+                list[n] = value; // assign new value
             }
         }
     }
 
-    public partial class Card : Button
+    public partial class Card : Button // card class, card is a button
     {
-        public int type = -1;
+        public int type = -1; // default type, -1 so you know when somethings wrong
 
-        public Card()
+        public Card() // default constructor
         {
-            type = 0;
-            Content = "test";
-            Width = 50;
-            Height = 50;
+            type = 0; // set default type
+            Content = "test"; // set default content
+            Width = 50; // set default width
+            Height = 50; // set default height
             this.Click += button1_Click; // subscribes the click event to a function
         }
-        public Card(int type, double width, int size)
+        public Card(int type, double width, int size) // override constructor [USE THIS ONE]
         {
-            this.type = type;
-            Content = "test";
-            Width = width / size;
-            Height = width / size;
+            this.type = type; // assign type given by main
+            Content = "test"; // temporary content
+            Width = width / size; // dynamic width according to amount of Cards given by size
+            Height = width / size; // dynamic height according to amount of Cards given by size
             this.Click += button1_Click; // subscribes the click event to a function
         }
 
-        private void button1_Click(object sender, RoutedEventArgs e)
+        private void button1_Click(object sender, RoutedEventArgs e) // click event/function [works more like event]
         {
-            this.Content = type;
+            this.Content = type; // show type as content
         }
     }
 }
