@@ -14,9 +14,6 @@ using System.Windows.Shapes;
 
 namespace Concept
 {
-    /// <summary>
-    /// Interaction logic for menu.xaml
-    /// </summary>
     public partial class menu : Window
     {
         public menu()

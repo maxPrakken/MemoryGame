@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,10 +15,18 @@ using System.Windows.Shapes;
 
 namespace Concept
 {
-
     public partial class MainWindow : Window
     {
         WrapPanel wp = new WrapPanel(); // initialise wrap panel
+
+        menu m = new menu();
+
+        protected override void OnClosed(EventArgs e) // shuts down program when main window is closed
+        {
+            base.OnClosed(e); // starts closing window event
+
+            Application.Current.Shutdown(); // shuts down application
+        }
 
         public MainWindow() // main function
         {
@@ -83,6 +90,15 @@ namespace Concept
                 list[n] = value; // assign new value
             }
         }
+
+        private void OnKeyDownHandler(object sender, KeyEventArgs e)
+        {
+            Console.WriteLine("testtestsett");
+            if (e.Key == Key.E)
+            {
+                
+            }
+        }
     }
 
     public partial class Card : Button // card class, card is a button
@@ -108,10 +124,7 @@ namespace Concept
 
         private void button1_Click(object sender, RoutedEventArgs e) // click event/function [works more like event]
         {
-            this.Content = type; // show type as content
+            this.Content = type; // show type as content            
         }
     }
 }
-=======
-﻿
->>>>>>> 3432150f2af67f8578aa32a537b2ed42a96e3937
