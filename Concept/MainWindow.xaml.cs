@@ -57,6 +57,10 @@ namespace Concept
 
             this.Content = wp; // give wrappanel to the content
             this.Show(); // show the content
+
+           
+            this.Content = m; // changes the content to the other page
+            
         }
 
         public void RandomOrder() // function that empties and fills the wrappanel for randomisation
@@ -124,7 +128,7 @@ namespace Concept
 
         private void button1_Click(object sender, RoutedEventArgs e) // click event/function [works more like event]
         {
-            this.Content = type; // show type as content            
+            this.Content = type; // show type as 
         }
     }
 }

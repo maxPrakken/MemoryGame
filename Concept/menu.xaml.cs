@@ -14,7 +14,7 @@ using System.Windows.Shapes;
 
 namespace Concept
 {
-    public partial class menu : Window
+    public partial class menu : Page
     {
         public menu()
         {
