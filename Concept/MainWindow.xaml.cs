@@ -58,9 +58,7 @@ namespace Concept
             this.Content = wp; // give wrappanel to the content
             this.Show(); // show the content
 
-           
-            this.Content = m; // changes the content to the other page
-            
+            //this.Content = m; // changes the content to the other 
         }
 
         public void RandomOrder() // function that empties and fills the wrappanel for randomisation
@@ -95,12 +93,12 @@ namespace Concept
             }
         }
 
-        private void OnKeyDownHandler(object sender, KeyEventArgs e)
+        private void Window_KeyDown(object sender, KeyEventArgs e) // key down function, is any key
         {
-            Console.WriteLine("testtestsett");
-            if (e.Key == Key.E)
+            if (e.Key == Key.E) // check key
             {
-                
+                e.Handled = true; // set handled to true
+                this.Content = m; // swap content
             }
         }
     }
@@ -115,7 +113,7 @@ namespace Concept
             Content = "test"; // set default content
             Width = 50; // set default width
             Height = 50; // set default height
-            this.Click += button1_Click; // subscribes the click event to a function
+            this.Click += Button1_Click; // subscribes the click event to a function
         }
         public Card(int type, double width, int size) // override constructor [USE THIS ONE]
         {
@@ -123,10 +121,10 @@ namespace Concept
             Content = "test"; // temporary content
             Width = width / size; // dynamic width according to amount of Cards given by size
             Height = width / size; // dynamic height according to amount of Cards given by size
-            this.Click += button1_Click; // subscribes the click event to a function
+            this.Click += Button1_Click; // subscribes the click event to a function
         }
 
-        private void button1_Click(object sender, RoutedEventArgs e) // click event/function [works more like event]
+        private void Button1_Click(object sender, RoutedEventArgs e) // click event/function [works more like event]
         {
             this.Content = type; // show type as 
         }
