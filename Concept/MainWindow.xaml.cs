@@ -19,20 +19,20 @@ namespace Concept
     {
         public MainWindow()
         {
-            InitializeComponent();
+            InitializeComponent(); // call the xaml file
 
-            Button btn = new Button();
+            Button btn = new Button(); // create new button
 
-            btn.Click += Button1_Click;
+            btn.Click += Button1_Click; // add button event to btn click
 
-            this.Show();
-            this.Content = btn;
+            this.Show(); // show content of window
+            this.Content = btn; // add btn to content
         }
 
         private void Button1_Click(object sender, RoutedEventArgs e) // click event/function [works more like event]
         {
-            Memorygame mg = new Memorygame();
-            this.Content = mg; // show type as 
+            Memorygame mg = new Memorygame(); // instance of memorygame
+            this.Content = mg; // show memorygame page in content
         }
     }
 }
