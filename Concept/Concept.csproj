@@ -66,14 +66,14 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="menu.xaml">
+    <Page Include="Memorygame.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="menu.xaml.cs">
-      <DependentUpon>menu.xaml</DependentUpon>
+    <Compile Include="Memorygame.xaml.cs">
+      <DependentUpon>Memorygame.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
