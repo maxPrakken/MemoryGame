@@ -19,9 +19,14 @@ namespace Concept
     {
         WrapPanel wp = new WrapPanel(); // initialise wrap panel
 
+        List<string> players = new List<string>();
+        
         public Memorygame() // main function
         {
             InitializeComponent(); // no clue what it does but dont remove it
+
+            players.Add("player");
+            players.Add("player");
 
             wp.Width = 500; // set wrappanel width
             wp.Height = 500; // set wrappanel height

@@ -69,8 +69,8 @@ namespace Concept
 
         private void Button_start_Click(object sender, RoutedEventArgs e) // click event/function [works more like event]
         {
-            Memorygame mg = new Memorygame(); // instance of memorygame
-            this.Content = mg; // show memorygame page in content
+            Selectplayers sp = new Selectplayers(); // instance of memorygame
+            this.Content = sp; // show memorygame page in content
         }
 
         private void Button_resume_Click(object sender, RoutedEventArgs e)
