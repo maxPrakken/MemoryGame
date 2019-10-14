@@ -7,6 +7,22 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="600" Width="600">
     <Grid>
+        <Button x:Name="startbtn" Width="150px" Height="75px" Click="Button_start_Click" Margin="222,43,221.6,452.4">Start</Button>
+        <Button x:Name="resumebtn" Width="150px" Height="75px" Click="Button_resume_Click" Margin="222,175,221.6,320.4" RenderTransformOrigin="-0.187,0.555">Resume</Button>
+        <Button x:Name="highscorebtn" Width="150px" Height="75px" Click="Button_highscore_Click" Margin="222,302,221.6,193.4" RenderTransformOrigin="-0.048,0.661">Highscore</Button>
+        <Button x:Name="quitbtn" Width="150px" Height="75px" Click="Button_quit_Click" Margin="222,421,221.6,74.4">Quit</Button>
 
+        <Button x:Name="p1" Visibility="Collapsed" Width="150px" Height="75px" Click="Button_1speler_Click" Margin="37,43,406.6,452.4">1 player</Button>
+        <Button x:Name="p2" Visibility="Collapsed" Width="150px" Height="75px" Click="Button_2speler_Click" Margin="37,175,406.6,320.4">2 players</Button>
+        <Button x:Name="p3" Visibility="Collapsed" Width="150px" Height="75px" Click="Button_3speler_Click" Margin="37,302,406.6,193.4">3 players</Button>
+        <Button x:Name="p4" Visibility="Collapsed" Width="150px" Height="75px" Click="Button_4speler_Click" Margin="37,421,406.6,74.4">4 players</Button>
+
+        <TextBox x:Name="p1name" Visibility="Collapsed" Width="200px" Height="20px" Margin="342,175,51.6,375.4">name. . .</TextBox>
+        <TextBox x:Name="p2name" Visibility="Collapsed" Width="200px" Height="20px" Margin="342,236,51.6,314.4">name. . .</TextBox>
+        <TextBox x:Name="p3name" Visibility="Collapsed" Width="200px" Height="20px" Margin="342,302,51.6,248.4">name. . .</TextBox>
+        <TextBox x:Name="p4name" Visibility="Collapsed" Width="200px" Height="20px" Margin="342,363,51.6,187.4">name. . .</TextBox>
+
+        <Button x:Name="startGamebtn" Click="ButtonGameStart_Click" Visibility="Collapsed" Width="100px" Height="100px" Margin="484,460,9.6,10.4">StartGame</Button>
     </Grid>
+    
 </Window>

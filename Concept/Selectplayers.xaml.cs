@@ -22,9 +22,7 @@ namespace Concept
     {
         Canvas cv1 = new Canvas();
 
-        
-
-        Canvas sp = new Canvas(); // create wrappanel
+        Canvas sp = new Canvas();
 
         public Selectplayers()
         {

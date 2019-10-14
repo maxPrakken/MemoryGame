@@ -34,3 +34,5 @@ C:\Users\Gellant\Documents\school\ict\MemoryGame\Concept\obj\Debug\Concept.cspro
 C:\Users\Gellant\Documents\school\ict\MemoryGame\Concept\obj\Debug\Concept.csproj.CoreCompileInputs.cache
 C:\Users\Gellant\Documents\school\ict\MemoryGame\Concept\obj\Debug\Selectplayers.g.cs
 C:\Users\Gellant\Documents\school\ict\MemoryGame\Concept\obj\Debug\Selectplayers.baml
+C:\Users\maxpr\Documents\NHL\2019-2020\memoryProject\concept\MemoryGame\Concept\obj\Debug\Selectplayers.g.cs
+C:\Users\maxpr\Documents\NHL\2019-2020\memoryProject\concept\MemoryGame\Concept\obj\Debug\Selectplayers.baml
