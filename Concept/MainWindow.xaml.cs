@@ -99,10 +99,15 @@ namespace Concept
             {
                 playerList.Add(p4name.Text);
             }
-            if (playerList.Count <1 )
+            if (playerList.Count < 1 )
             {
-                string text = "no players found";
+                string text = "Fill in your name";
                 MessageBox.Show(text);
+            }
+            else
+            {
+                Memorygame mg = new Memorygame();
+                this.Content = mg;
             }
             
                         
