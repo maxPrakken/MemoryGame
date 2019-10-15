@@ -41,6 +41,7 @@ namespace Concept
             p2.Visibility = Visibility.Visible;
             p3.Visibility = Visibility.Visible;
             p4.Visibility = Visibility.Visible;
+            backButton.Visibility = Visibility.Visible;
 
             startbtn.Visibility = Visibility.Collapsed;
             resumebtn.Visibility = Visibility.Collapsed;
@@ -78,6 +79,26 @@ namespace Concept
         private void Button_4speler_Click(object sender, RoutedEventArgs e)
         {
             TextBoxPlace(4);
+        }
+        private void BackButton_Click(object sender, RoutedEventArgs e)
+        // Back Button 
+        {
+            p1.Visibility = Visibility.Collapsed;
+            p2.Visibility = Visibility.Collapsed;
+            p3.Visibility = Visibility.Collapsed;
+            p4.Visibility = Visibility.Collapsed;
+            startGamebtn.Visibility = Visibility.Collapsed;
+            backButton.Visibility = Visibility.Collapsed;
+
+            startbtn.Visibility = Visibility.Visible;
+            resumebtn.Visibility = Visibility.Visible;
+            highscorebtn.Visibility = Visibility.Visible;
+            quitbtn.Visibility = Visibility.Visible;
+
+            p1name.Visibility = Visibility.Collapsed;
+            p2name.Visibility = Visibility.Collapsed;
+            p3name.Visibility = Visibility.Collapsed;
+            p4name.Visibility = Visibility.Collapsed;
         }
 
         private void ButtonGameStart_Click(object sender, RoutedEventArgs e)
@@ -153,7 +174,10 @@ namespace Concept
                     }
             }
             startGamebtn.Visibility = Visibility.Visible;
+            
         }
+
+       
 
         private void p3name_TextChanged(object sender, TextChangedEventArgs e)
         {
