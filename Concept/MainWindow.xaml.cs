@@ -86,17 +86,17 @@ namespace Concept
             {
                 playerList.Add(p1name.Text);
             }
-            if (p2name.Text != "" || p1name.Text != "name. . ." || p1name.Text != null)
+            if (p2name.Text != "" || p2name.Text != "name. . ." || p2name.Text != null)
             {
-                playerList.Add(p1name.Text);
+                playerList.Add(p2name.Text);
             }
-            if (p3name.Text != "" || p1name.Text != "name. . ." || p1name.Text != null)
+            if (p3name.Text != "" || p3name.Text != "name. . ." || p3name.Text != null)
             {
-                playerList.Add(p1name.Text);
+                playerList.Add(p3name.Text);
             }
-            if (p4name.Text != "" || p1name.Text != "name. . ." || p1name.Text != null)
+            if (p4name.Text != "" || p4name.Text != "name. . ." || p4name.Text != null)
             {
-                playerList.Add(p1name.Text);
+                playerList.Add(p4name.Text);
             }
 
             //start the game here and send the list to the game
