@@ -18,6 +18,7 @@ namespace Concept
     public partial class MainWindow : Window
     {
         List<string> playerList;
+        
 
         protected override void OnClosed(EventArgs e) // shuts down program when main window is closed
         {
@@ -82,26 +83,35 @@ namespace Concept
 
         private void ButtonGameStart_Click(object sender, RoutedEventArgs e)
         {
-            if(p1name.Text != "" || p1name.Text != "name. . ." || p1name.Text != null)
+            if(p1name.Text != "" && p1name.Text != "name. . ." && p1name.Text != null)
             {
                 playerList.Add(p1name.Text);
             }
-            if (p2name.Text != "" || p2name.Text != "name. . ." || p2name.Text != null)
+            if (p2name.Text != "" && p2name.Text != "name. . ." && p2name.Text != null)
             {
                 playerList.Add(p2name.Text);
             }
-            if (p3name.Text != "" || p3name.Text != "name. . ." || p3name.Text != null)
+            if (p3name.Text != "" && p3name.Text != "name. . ." && p3name.Text != null)
             {
                 playerList.Add(p3name.Text);
             }
-            if (p4name.Text != "" || p4name.Text != "name. . ." || p4name.Text != null)
+            if (p4name.Text != "" && p4name.Text != "name. . ." && p4name.Text != null)
             {
                 playerList.Add(p4name.Text);
             }
-
+            if (playerList.Count <1 )
+            {
+                string text = "no players found";
+                MessageBox.Show(text);
+            }
+            
+                        
             //start the game here and send the list to the game
         }
-
+        
+        
+        
+        
         public void TextBoxPlace(int count)
         {
             switch(count) {
