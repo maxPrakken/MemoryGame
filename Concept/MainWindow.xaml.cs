@@ -122,14 +122,24 @@ namespace Concept
             }
             if (playerList.Count < 1 )
             {
-                string text = "Fill in your name";
-                MessageBox.Show(text);
+                MessageBox.Show("Fill in your name");
             }
             else
             {
-                Memorygame mg = new Memorygame(playerList);
-                this.Content = mg;
 
+                IEnumerable<string> comparel = playerList.Distinct();
+                if(playerList.Count == comparel.Count())
+                {
+                    Memorygame mg = new Memorygame(playerList);
+                    this.Content = mg;
+                    comparel = null;
+                }
+                else
+                {
+                    MessageBox.Show("names can't be the same, please change the duplicate name");
+                    comparel = null;
+                    playerList.Clear();
+                }
             }
             
                         
