@@ -26,12 +26,42 @@ namespace Concept
             InitializeComponent(); // no clue what it does but dont remove it
 
             players.Add("player");
-            players.Add("player");
 
             wp.Width = 500; // set wrappanel width
             wp.Height = 500; // set wrappanel height
 
             CreateGrid(4); // create grid with set size, give it a even number or it'll throw an exception
+        }
+        public Memorygame(List<string> players)
+        {
+            InitializeComponent(); // no clue what it does but dont remove it
+
+            wp.Width = 500; // set wrappanel width
+            wp.Height = 500; // set wrappanel height
+
+            this.players = players;
+
+            AssignGrid();
+        }
+
+        public void AssignGrid()
+        {
+            if (players.Count == 1)
+            {
+                CreateGrid(4);
+            }
+            else if (players.Count == 2)
+            {
+                CreateGrid(6);
+            }
+            else if (players.Count == 3)
+            {
+                CreateGrid(8);
+            }
+            else if (players.Count == 4)
+            {
+                CreateGrid(10);
+            }
         }
 
         public void CreateGrid(int size) // give even number

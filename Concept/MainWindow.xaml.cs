@@ -127,8 +127,9 @@ namespace Concept
             }
             else
             {
-                Memorygame mg = new Memorygame();
+                Memorygame mg = new Memorygame(playerList);
                 this.Content = mg;
+
             }
             
                         
