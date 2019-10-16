@@ -20,7 +20,8 @@ namespace Concept
         WrapPanel wp = new WrapPanel(); // initialise wrap panel
 
         List<string> players = new List<string>();
-        
+        List<Card> pc = new List<Card>();
+
         public Memorygame() // main function
         {
             InitializeComponent(); // no clue what it does but dont remove it
@@ -75,7 +76,7 @@ namespace Concept
             {
                 int type = i / 2; // set type
 
-                Card btn = new Card(type, wp.Width, size); // initialize class Card, Card derives from Button
+                Card btn = new Card(type, wp.Width, size, pc); // initialize class Card, Card derives from Button
                 wp.Children.Add(btn); // add the card to the  wrappanel
             }
 
@@ -131,6 +132,7 @@ namespace Concept
     public partial class Card : Button // card class, card is a button
     {
         public int type = -1; // default type, -1 so you know when somethings wrong
+        private List<Card> pc = new List<Card>();
 
         public Card() // default constructor
         {
@@ -140,18 +142,48 @@ namespace Concept
             Height = 50; // set default height
             this.Click += Button1_Click; // subscribes the click event to a function
         }
-        public Card(int type, double width, int size) // override constructor [USE THIS ONE]
+        public Card(int type, double width, int size, List<Card> pc) // override constructor [USE THIS ONE]
         {
             this.type = type; // assign type given by main
             Content = "test"; // temporary content
             Width = width / size; // dynamic width according to amount of Cards given by size
             Height = width / size; // dynamic height according to amount of Cards given by size
             this.Click += Button1_Click; // subscribes the click event to a function
+            this.pc = pc;
         }
 
         private void Button1_Click(object sender, RoutedEventArgs e) // click event/function [works more like event]
         {
-            this.Content = type; // show type as 
+            this.Content = type; // show type as
+            
+            
+            if(pc.Count < 2)
+            {
+                pc.Add(this);
+            }
+            if (pc.Count == 2)
+            {
+                if (pc[0].type == pc[1].type)
+                {
+
+                    //cards stay flipped(do nothing)
+                    //points added
+                    //cards unclickable
+
+                }
+                else
+                {
+                    pc[0].Content = "hoi";
+                    pc[1].Content = "hoi";
+
+
+
+
+                }
+            pc.Clear();
+            }
         }
+        
     }
+
 }
