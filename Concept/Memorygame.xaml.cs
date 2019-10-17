@@ -160,7 +160,10 @@ namespace Concept
         {
             this.Content = type; // show type as
 
-            FlipManager();
+            if (this.IsEnabled)
+            {
+                FlipManager();
+            }
         }
 
         private void FlipManager()
@@ -176,6 +179,8 @@ namespace Concept
                 if (pc[0].type == pc[1].type)
                 {
                     //points added
+                    pc[0].IsEnabled = false;
+                    pc[1].IsEnabled = false;
                     pc.Clear();
 
                     wp.IsHitTestVisible = true;
