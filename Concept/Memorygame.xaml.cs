@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Threading;
 
 namespace Concept
 {
@@ -155,35 +156,45 @@ namespace Concept
         private void Button1_Click(object sender, RoutedEventArgs e) // click event/function [works more like event]
         {
             this.Content = type; // show type as
-            
-            
-            if(pc.Count < 2)
+
+            FlipManager();
+        }
+
+        private void FlipManager()
+        {
+            if (pc.Count < 2)
             {
                 pc.Add(this);
             }
             if (pc.Count == 2)
             {
+
                 if (pc[0].type == pc[1].type)
                 {
 
                     //cards stay flipped(do nothing)
                     //points added
                     //cards unclickable
-
+                    pc.Clear();
                 }
                 else
                 {
-                    pc[0].Content = "hoi";
-                    pc[1].Content = "hoi";
-
-
-
-
+                    Task.Delay(2000).ContinueWith(_ =>
+                    {
+                        this.Dispatcher.Invoke(() =>
+                        {
+                            pc[0].Content = "test";
+                            pc[1].Content = "test";
+                            pc.Clear();
+                        });
+                        
+                    }
+                    );
                 }
-            pc.Clear();
             }
         }
-        
     }
 
 }
+    
+
