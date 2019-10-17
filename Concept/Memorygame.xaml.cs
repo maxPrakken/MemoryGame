@@ -77,7 +77,7 @@ namespace Concept
             {
                 int type = i / 2; // set type
 
-                Card btn = new Card(type, wp.Width, size, pc); // initialize class Card, Card derives from Button
+                Card btn = new Card(type, wp.Width, size, pc, wp); // initialize class Card, Card derives from Button
                 wp.Children.Add(btn); // add the card to the  wrappanel
             }
 
@@ -134,6 +134,9 @@ namespace Concept
     {
         public int type = -1; // default type, -1 so you know when somethings wrong
         private List<Card> pc = new List<Card>();
+        WrapPanel wp = new WrapPanel();
+
+        bool locked = false;
 
         public Card() // default constructor
         {
@@ -143,14 +146,16 @@ namespace Concept
             Height = 50; // set default height
             this.Click += Button1_Click; // subscribes the click event to a function
         }
-        public Card(int type, double width, int size, List<Card> pc) // override constructor [USE THIS ONE]
+        public Card(int type, double width, int size, List<Card> pc, WrapPanel wp) // override constructor [USE THIS ONE]
         {
+            
             this.type = type; // assign type given by main
             Content = "test"; // temporary content
             Width = width / size; // dynamic width according to amount of Cards given by size
             Height = width / size; // dynamic height according to amount of Cards given by size
             this.Click += Button1_Click; // subscribes the click event to a function
             this.pc = pc;
+            this.wp = wp;
         }
 
         private void Button1_Click(object sender, RoutedEventArgs e) // click event/function [works more like event]
@@ -168,6 +173,7 @@ namespace Concept
             }
             if (pc.Count == 2)
             {
+                wp.IsHitTestVisible = false;
 
                 if (pc[0].type == pc[1].type)
                 {
@@ -175,7 +181,11 @@ namespace Concept
                     //cards stay flipped(do nothing)
                     //points added
                     //cards unclickable
+                    pc[0].locked = true;
+                    pc[1].locked = true;
                     pc.Clear();
+
+                    wp.IsHitTestVisible = true;
                 }
                 else
                 {
@@ -186,6 +196,8 @@ namespace Concept
                             pc[0].Content = "test";
                             pc[1].Content = "test";
                             pc.Clear();
+
+                            wp.IsHitTestVisible = true;
                         });
                         
                     }
