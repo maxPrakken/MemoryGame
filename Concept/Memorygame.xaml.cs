@@ -136,8 +136,6 @@ namespace Concept
         private List<Card> pc = new List<Card>();
         WrapPanel wp = new WrapPanel();
 
-        bool locked = false;
-
         public Card() // default constructor
         {
             type = 0; // set default type
@@ -177,12 +175,7 @@ namespace Concept
 
                 if (pc[0].type == pc[1].type)
                 {
-
-                    //cards stay flipped(do nothing)
                     //points added
-                    //cards unclickable
-                    pc[0].locked = true;
-                    pc[1].locked = true;
                     pc.Clear();
 
                     wp.IsHitTestVisible = true;
