@@ -25,6 +25,10 @@ namespace Concept
         List<Card> pc = new List<Card>();
         List<Player> players = new List<Player>();
 
+        private Memorygame _mg;
+
+        Player cp;
+        int currentCP = 0;
 
 
         public Memorygame() // main function
@@ -43,8 +47,27 @@ namespace Concept
             wp.Width = 500; // set wrappanel width
             wp.Height = 500; // set wrappanel height
 
+            playerNames = players;
+
+            _mg = this;
+
             CreatePlayers();
+            CyclePlayers();
             AssignGrid();
+        }
+
+        public void CyclePlayers()
+        {
+            if(currentCP < players.Count)
+            {
+                cp = players[currentCP];
+                currentCP++;
+            }
+            else
+            {
+                currentCP = 0;
+                cp = players[currentCP];
+            }
         }
 
         public void CreatePlayers()
@@ -91,7 +114,7 @@ namespace Concept
             {
                 int type = i / 2; // set type
 
-                Card btn = new Card(type, wp.Width, size, pc, wp); // initialize class Card, Card derives from Button
+                Card btn = new Card(type, wp.Width, size, pc, wp, _mg); // initialize class Card, Card derives from Button
                 wp.Children.Add(btn); // add the card to the  wrappanel
             }
 
@@ -118,6 +141,12 @@ namespace Concept
             {
                 wp.Children.Add(ca); // add children back to wrappanel but now shuffled
             }
+        }
+
+        public void AddPoints(int points)
+        {
+            cp.score += points;
+            Console.WriteLine(cp.name + " " + cp.score);
         }
 
         private static Random rng = new Random(); // initialize RNJezus
@@ -149,6 +178,8 @@ namespace Concept
         public int type = -1; // default type, -1 so you know when somethings wrong
         private List<Card> pc = new List<Card>();
         WrapPanel wp = new WrapPanel();
+        Player cp;
+        Memorygame _mg;
 
         public Card() // default constructor
         {
@@ -158,7 +189,7 @@ namespace Concept
             Height = 50; // set default height
             this.Click += Button1_Click; // subscribes the click event to a function
         }
-        public Card(int type, double width, int size, List<Card> pc, WrapPanel wp) // override constructor [USE THIS ONE]
+        public Card(int type, double width, int size, List<Card> pc, WrapPanel wp, Memorygame _mg) // override constructor [USE THIS ONE]
         {
 
             this.type = type; // assign type given by main
@@ -168,6 +199,7 @@ namespace Concept
             this.Click += Button1_Click; // subscribes the click event to a function
             this.pc = pc;
             this.wp = wp;
+            this._mg = _mg;
         }
 
         private void Button1_Click(object sender, RoutedEventArgs e) // click event/function [works more like event]
@@ -190,14 +222,18 @@ namespace Concept
             {
                 wp.IsHitTestVisible = false;
 
-                if (pc[0].type == pc[1].type)
+                if (pc[0].type == pc[1].type && pc[0] != pc[1])
                 {
-                    //points added
+                    _mg.AddPoints(100);
                     pc[0].IsEnabled = false;
                     pc[1].IsEnabled = false;
                     pc.Clear();
 
                     wp.IsHitTestVisible = true;
+                }
+                else if(pc[0] == pc[1]) 
+                {
+                    pc.Clear();
                 }
                 else
                 {
@@ -210,8 +246,9 @@ namespace Concept
                             pc.Clear();
 
                             wp.IsHitTestVisible = true;
-                        });
 
+                            _mg.CyclePlayers();
+                        });
                     }
                     );
                 }
@@ -221,9 +258,9 @@ namespace Concept
 
     public class Player
     {
-        string name;
-        int score = 0;
-        //Powerup pu;
+        public string name;
+        public int score = 0;
+        //public Powerup pu;
 
         public Player()
         {

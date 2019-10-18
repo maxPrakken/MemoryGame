@@ -9,8 +9,5 @@
       Title="Memorygame"
       KeyDown="Window_KeyDown">
 
-    <Grid>
-        <Button x:Name="InGameQuitBttn" Content="Quit" Margin="477,515,-0.4,-0.4"/>
-
-    </Grid>
+    <Grid/>
 </Page>
