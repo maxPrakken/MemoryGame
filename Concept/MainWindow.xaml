@@ -5,12 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Concept"
         mc:Ignorable="d"
-        Title="MainWindow" Height="600" Width="600">
+        Title="MainWindow"
+        WindowStyle="None"
+        WindowState="Maximized" d:DesignWidth="830.4" d:DesignHeight="585.6"
+        >
+    
     <Grid>
         <Button x:Name="startbtn" Width="150px" Height="75px" Click="Button_start_Click" Margin="222,43,221.6,452.4">Start</Button>
         <Button x:Name="resumebtn" Width="150px" Height="75px" Click="Button_resume_Click" Margin="222,175,221.6,320.4" RenderTransformOrigin="-0.187,0.555">Resume</Button>
         <Button x:Name="highscorebtn" Width="150px" Height="75px" Click="Button_highscore_Click" Margin="222,302,221.6,193.4" RenderTransformOrigin="-0.048,0.661">Highscore</Button>
         <Button x:Name="quitbtn" Width="150px" Height="75px" Click="Button_quit_Click" Margin="222,421,221.6,74.4">Quit</Button>
+        
 
         <Button x:Name="p1" Visibility="Collapsed" Width="150px" Height="75px" Click="Button_1speler_Click" Margin="37,43,406.6,452.4">1 player</Button>
         <Button x:Name="p2" Visibility="Collapsed" Width="150px" Height="75px" Click="Button_2speler_Click" Margin="37,175,406.6,320.4">2 players</Button>
@@ -22,8 +27,10 @@
         <TextBox x:Name="p3name" Visibility="Collapsed" Width="200px" Height="20px" Margin="342,302,51.6,248.4">name. . .</TextBox>
         <TextBox x:Name="p4name" Visibility="Collapsed" Width="200px" Height="20px" Margin="342,363,51.6,187.4">name. . .</TextBox>
 
+
         <Button x:Name="startGamebtn" Click="ButtonGameStart_Click" Visibility="Collapsed" Width="100px" Height="100px" Margin="484,460,9.6,10.4">StartGame</Button>
         <Button x:Name="backButton"  Click="BackButton_Click" Visibility="Collapsed" Width="100px" Height="100px" Margin="377,460,116.6,10.4">Back</Button>
+
     </Grid>
     
 </Window>

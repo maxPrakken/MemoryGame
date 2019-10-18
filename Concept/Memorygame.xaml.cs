@@ -18,16 +18,18 @@ namespace Concept
 {
     public partial class Memorygame : Page
     {
+
         WrapPanel wp = new WrapPanel(); // initialise wrap panel
 
-        List<string> players = new List<string>();
+        List<string> playerNames = new List<string>();
         List<Card> pc = new List<Card>();
+        List<Player> players = new List<Player>();
+
+
 
         public Memorygame() // main function
         {
             InitializeComponent(); // no clue what it does but dont remove it
-
-            players.Add("player");
 
             wp.Width = 500; // set wrappanel width
             wp.Height = 500; // set wrappanel height
@@ -41,9 +43,17 @@ namespace Concept
             wp.Width = 500; // set wrappanel width
             wp.Height = 500; // set wrappanel height
 
-            this.players = players;
-
+            CreatePlayers();
             AssignGrid();
+        }
+
+        public void CreatePlayers()
+        {
+            for (int i = 0; i < playerNames.Count; i++)
+            {
+                Player p = new Player(playerNames[i]);
+                players.Add(p);
+            }
         }
 
         public void AssignGrid()
@@ -63,6 +73,10 @@ namespace Concept
             else if (players.Count == 4)
             {
                 CreateGrid(10);
+            }
+            else
+            {
+                throw new System.ArgumentException("player count is 0 or more then 4, please be more carefull in the future");
             }
         }
 
@@ -146,7 +160,7 @@ namespace Concept
         }
         public Card(int type, double width, int size, List<Card> pc, WrapPanel wp) // override constructor [USE THIS ONE]
         {
-            
+
             this.type = type; // assign type given by main
             Content = "test"; // temporary content
             Width = width / size; // dynamic width according to amount of Cards given by size
@@ -197,11 +211,27 @@ namespace Concept
 
                             wp.IsHitTestVisible = true;
                         });
-                        
+
                     }
                     );
                 }
             }
+        }
+    }
+
+    public class Player
+    {
+        string name;
+        int score = 0;
+        //Powerup pu;
+
+        public Player()
+        {
+
+        }
+        public Player(string name)
+        {
+            this.name = name;
         }
     }
 

@@ -52,7 +52,6 @@ C:\Users\Gebruiker\Documents\NHLStenden 2019-2020\1.1\Project\MemoryGame\Concept
 C:\Users\Gebruiker\Documents\NHLStenden 2019-2020\1.1\Project\MemoryGame\Concept\obj\Debug\Concept.g.resources
 C:\Users\Gebruiker\Documents\NHLStenden 2019-2020\1.1\Project\MemoryGame\Concept\obj\Debug\Concept.Properties.Resources.resources
 C:\Users\Gebruiker\Documents\NHLStenden 2019-2020\1.1\Project\MemoryGame\Concept\obj\Debug\Concept.csproj.GenerateResource.cache
-C:\Users\Gebruiker\Documents\NHLStenden 2019-2020\1.1\Project\MemoryGame\Concept\obj\Debug\Concept.csproj.CoreCompileInputs.cache
 C:\Users\Gebruiker\Documents\NHLStenden 2019-2020\1.1\Project\MemoryGame\Concept\obj\Debug\Concept.exe
 C:\Users\Gebruiker\Documents\NHLStenden 2019-2020\1.1\Project\MemoryGame\Concept\obj\Debug\Concept.pdb
 C:\Users\Ahmed\OneDrive\Documents\HBOICT jaar 1 19-20\MemoryGame\Concept\bin\Debug\Concept.exe.config
