@@ -12,8 +12,10 @@ namespace Concept
 
         WrapPanel wp = new WrapPanel(); // initialise wrap panel
         
-        StackPanel SP = new StackPanel(); // main panel
+        DockPanel DP = new DockPanel(); // main panel
 
+        StackPanel psList = new StackPanel();
+        TextBox cpp = new TextBox(); // current player display
 
         List<string> playerNames = new List<string>();
         List<Card> pc = new List<Card>();
@@ -33,15 +35,11 @@ namespace Concept
 
             CreateGrid(4); // create grid with set size, give it a even number or it'll throw an exception
 
-            this.Content = SP; // give the content
+            this.Content = DP; // give the content
         }
         public Memorygame(List<string> players)
         {
             InitializeComponent(); // no clue what it does but dont remove it
-
-            SP.Orientation = Orientation.Horizontal;
-            CreatePlayerScores();
-            SP.Children.Add(wp);
 
             wp.Width = 500; // set wrappanel width
             wp.Height = 500; // set wrappanel height
@@ -51,25 +49,29 @@ namespace Concept
             _mg = this;
                        
             CreatePlayers();
+            
+            CreatePlayerScores();
+
+            DP.Children.Add(psList);
+            DP.Children.Add(wp);
+
             CyclePlayers();
             AssignGrid();
 
-            this.Content = SP; // give the content
+            this.Content = DP; // give the content
         }
 
         public void CreatePlayerScores()
         {
-            StackPanel tbList = new StackPanel();
-            tbList.Orientation = Orientation.Vertical;
+            psList.Orientation = Orientation.Vertical;
 
-            TextBox cpp = new TextBox();
             cpp.IsReadOnly = true;
             cpp.BorderThickness = new Thickness(0);
             cpp.Width = 150;
             cpp.Height = 75;
-            SP.Children.Add(cpp);
+            psList.Children.Add(cpp);
 
-            for(int i = 0; i < players.Count; i++)
+            for (int i = 0; i < players.Count; i++)
             {
                 TextBox p = new TextBox();
                 p.IsReadOnly = true;
@@ -77,7 +79,7 @@ namespace Concept
                 p.Text = players[i].name;
                 p.Width = 150;
                 p.Height = 75;
-                SP.Children.Add(p);
+                psList.Children.Add(p);
 
                 TextBox sc = new TextBox();
                 sc.IsReadOnly = true;
@@ -85,10 +87,8 @@ namespace Concept
                 sc.Text = players[i].score.ToString();
                 sc.Width = 150;
                 sc.Height = 75;
-                SP.Children.Add(sc);
+                psList.Children.Add(sc);
             }
-
-            //SP.Children.Add(tbList);
         }
 
         public void CyclePlayers()
@@ -96,12 +96,14 @@ namespace Concept
             if(currentCP < players.Count)
             {
                 cp = players[currentCP];
+                cpp.Text = cp.name;
                 currentCP++;
             }
             else
             {
                 currentCP = 0;
                 cp = players[currentCP];
+                cpp.Text = cp.name;
             }
         }
 
@@ -149,7 +151,7 @@ namespace Concept
             {
                 int type = i / 2; // set type
 
-                Card btn = new Card(type, wp.Width, size, wp, _mg); // initialize class Card, Card derives from Button
+                Card btn = new Card(type, wp.Width, size, wp, pc, _mg); // initialize class Card, Card derives from Button
                 wp.Children.Add(btn); // add the card to the  wrappanel
             }
 
@@ -219,7 +221,7 @@ namespace Concept
             Height = 50; // set default height
             this.Click += Button1_Click; // subscribes the click event to a function
         }
-        public Card(int type, double width, int size, WrapPanel wp, Memorygame _mg) // override constructor [USE THIS ONE]
+        public Card(int type, double width, int size, WrapPanel wp, List<Card> pc, Memorygame _mg) // override constructor [USE THIS ONE]
         {
 
             this.type = type; // assign type given by main
