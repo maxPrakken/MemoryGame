@@ -1,18 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-using System.Threading;
 
 namespace Concept
 {
@@ -20,6 +11,9 @@ namespace Concept
     {
 
         WrapPanel wp = new WrapPanel(); // initialise wrap panel
+        
+        StackPanel SP = new StackPanel(); // main panel
+
 
         List<string> playerNames = new List<string>();
         List<Card> pc = new List<Card>();
@@ -30,7 +24,6 @@ namespace Concept
         Player cp;
         int currentCP = 0;
 
-
         public Memorygame() // main function
         {
             InitializeComponent(); // no clue what it does but dont remove it
@@ -39,10 +32,16 @@ namespace Concept
             wp.Height = 500; // set wrappanel height
 
             CreateGrid(4); // create grid with set size, give it a even number or it'll throw an exception
+
+            this.Content = SP; // give the content
         }
         public Memorygame(List<string> players)
         {
             InitializeComponent(); // no clue what it does but dont remove it
+
+            SP.Orientation = Orientation.Horizontal;
+            CreatePlayerScores();
+            SP.Children.Add(wp);
 
             wp.Width = 500; // set wrappanel width
             wp.Height = 500; // set wrappanel height
@@ -50,10 +49,46 @@ namespace Concept
             playerNames = players;
 
             _mg = this;
-
+                       
             CreatePlayers();
             CyclePlayers();
             AssignGrid();
+
+            this.Content = SP; // give the content
+        }
+
+        public void CreatePlayerScores()
+        {
+            StackPanel tbList = new StackPanel();
+            tbList.Orientation = Orientation.Vertical;
+
+            TextBox cpp = new TextBox();
+            cpp.IsReadOnly = true;
+            cpp.BorderThickness = new Thickness(0);
+            cpp.Width = 150;
+            cpp.Height = 75;
+            SP.Children.Add(cpp);
+
+            for(int i = 0; i < players.Count; i++)
+            {
+                TextBox p = new TextBox();
+                p.IsReadOnly = true;
+                p.BorderThickness = new Thickness(0);
+                p.Text = players[i].name;
+                p.Width = 150;
+                p.Height = 75;
+                SP.Children.Add(p);
+
+                TextBox sc = new TextBox();
+                sc.IsReadOnly = true;
+                sc.BorderThickness = new Thickness(0);
+                sc.Text = players[i].score.ToString();
+                sc.Width = 150;
+                sc.Height = 75;
+                SP.Children.Add(sc);
+            }
+
+            //SP.Children.Add(tbList);
         }
 
         public void CyclePlayers()
@@ -114,15 +149,11 @@ namespace Concept
             {
                 int type = i / 2; // set type
 
-                Card btn = new Card(type, wp.Width, size, pc, wp, _mg); // initialize class Card, Card derives from Button
+                Card btn = new Card(type, wp.Width, size, wp, _mg); // initialize class Card, Card derives from Button
                 wp.Children.Add(btn); // add the card to the  wrappanel
             }
 
             RandomOrder(); // give the wrappanel a random order
-
-            this.Content = wp; // give wrappanel to the content
-
-            //this.Content = m; // changes the content to the other 
         }
 
         public void RandomOrder() // function that empties and fills the wrappanel for randomisation
@@ -178,7 +209,6 @@ namespace Concept
         public int type = -1; // default type, -1 so you know when somethings wrong
         private List<Card> pc = new List<Card>();
         WrapPanel wp = new WrapPanel();
-        Player cp;
         Memorygame _mg;
 
         public Card() // default constructor
@@ -189,7 +219,7 @@ namespace Concept
             Height = 50; // set default height
             this.Click += Button1_Click; // subscribes the click event to a function
         }
-        public Card(int type, double width, int size, List<Card> pc, WrapPanel wp, Memorygame _mg) // override constructor [USE THIS ONE]
+        public Card(int type, double width, int size, WrapPanel wp, Memorygame _mg) // override constructor [USE THIS ONE]
         {
 
             this.type = type; // assign type given by main
