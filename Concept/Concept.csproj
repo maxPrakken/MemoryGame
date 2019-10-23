@@ -54,6 +54,8 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Card.cs" />
+    <Compile Include="Player.cs" />
     <Compile Include="Selectplayers.xaml.cs">
       <DependentUpon>Selectplayers.xaml</DependentUpon>
     </Compile>
