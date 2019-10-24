@@ -16,6 +16,11 @@ namespace Concept
         {
             isused = false;
         }
+
+        public virtual void Use()
+        {
+
+        }
     }
 
     class ScoreSwap : Powerup
@@ -26,6 +31,16 @@ namespace Concept
         public ScoreSwap()
         {
 
+        }
+
+        public ScoreSwap(List<Player> pl)
+        {
+            this.pl = pl;
+        }
+
+        public override void Use()
+        {
+            ShuffleScore(this.pl);
         }
 
         public List<Player> ShuffleScore(List<Player> pl)
@@ -44,21 +59,33 @@ namespace Concept
 
             return pl;
         }
+    }
 
-        class ThemeSwap : Powerup
+    class ThemeSwap : Powerup
+    {
+        public ThemeSwap()
         {
-            public ThemeSwap()
-            {
 
-            }
+        }
+    }
+
+    class ShuffleCards : Powerup
+    {
+        Memorygame _mg;
+
+        public ShuffleCards()
+        {
+
         }
 
-        class ShuffleCards : Powerup
+        public ShuffleCards(Memorygame _mg)
         {
-            public ShuffleCards()
-            {
+            this._mg = _mg;
+        }
 
-            }
+        public override void Use()
+        {
+            _mg.RandomOrder();
         }
     }
 }

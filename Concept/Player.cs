@@ -10,7 +10,7 @@ namespace Concept
     {
         public string name;
         public int score = 0;
-        //public Powerup pu;
+        
 
         public Player()
         {

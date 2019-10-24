@@ -23,7 +23,7 @@ namespace Concept
 
         private Memorygame _mg;
 
-        ScoreSwap sc = new ScoreSwap();
+        Powerup powerup;
 
         Player cp;
         int currentCP = 0;
@@ -59,6 +59,8 @@ namespace Concept
 
             CyclePlayers();
             AssignGrid();
+
+            powerup = new ShuffleCards(_mg);
 
             this.Content = DP; // give the content
         }
@@ -220,7 +222,7 @@ namespace Concept
             if (e.Key == Key.E) // check key
             {
                 e.Handled = true; // set handled to true
-                players = sc.ShuffleScore(players);
+                powerup.Use();
             }
         }
     }
