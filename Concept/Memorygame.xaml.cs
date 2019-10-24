@@ -14,12 +14,12 @@ namespace Concept
         
         DockPanel DP = new DockPanel(); // main panel
 
-        StackPanel psList = new StackPanel();
+        StackPanel psList = new StackPanel(); // list of score textboxes
         TextBox cpp = new TextBox(); // current player display
 
         List<string> playerNames = new List<string>();
-        List<Card> pc = new List<Card>();
-        List<Player> players = new List<Player>();
+        List<Card> pc = new List<Card>(); // selected cards
+        List<Player> players = new List<Player>(); // list of players
 
         private Memorygame _mg;
 
@@ -61,6 +61,18 @@ namespace Concept
             this.Content = DP; // give the content
         }
 
+        public void UpdateScores()
+        {
+            foreach(TextBox t in psList.Children)
+            {
+                if(t.Text.Contains("score") && t.Text.Contains(cp.name))
+                {
+                    string input = cp.name + " score: " + cp.score.ToString();
+                    t.Text = input;
+                }
+            }
+        }
+
         public void CreatePlayerScores()
         {
             psList.Orientation = Orientation.Vertical;
@@ -72,19 +84,12 @@ namespace Concept
             psList.Children.Add(cpp);
 
             for (int i = 0; i < players.Count; i++)
-            {
-                TextBox p = new TextBox();
-                p.IsReadOnly = true;
-                p.BorderThickness = new Thickness(0);
-                p.Text = players[i].name;
-                p.Width = 150;
-                p.Height = 75;
-                psList.Children.Add(p);
-
+            { 
                 TextBox sc = new TextBox();
                 sc.IsReadOnly = true;
                 sc.BorderThickness = new Thickness(0);
-                sc.Text = players[i].score.ToString();
+                string input = players[i].name + " score: " + players[i].score.ToString();
+                sc.Text = input;
                 sc.Width = 150;
                 sc.Height = 75;
                 psList.Children.Add(sc);

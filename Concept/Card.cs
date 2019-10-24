@@ -43,6 +43,7 @@ namespace Concept
             if (this.IsEnabled)
             {
                 FlipManager();
+                _mg.UpdateScores();
             }
         }
 
