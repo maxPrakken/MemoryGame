@@ -24,7 +24,7 @@ namespace Concept
 
         public ScoreSwap()
         {
-            
+
         }
         public ScoreSwap(List<Player> pl)
         {
@@ -37,7 +37,7 @@ namespace Concept
         {
             int n = list.Count;
             while (n > 1)
-            {   
+            {
                 n--;
                 int k = rng.Next(n + 1);
                 T value = list[k];
@@ -51,7 +51,7 @@ namespace Concept
     {
         public ThemeSwap()
         {
-            
+
         }
     }
 
