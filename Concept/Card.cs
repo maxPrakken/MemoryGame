@@ -68,7 +68,11 @@ namespace Concept
                 }
                 else if (pc[0] == pc[1])
                 {
+                    pc[0].Content = "test";
+                    pc[1].Content = "test";
                     pc.Clear();
+                    wp.IsHitTestVisible = true;
+                    return;
                 }
                 else
                 {

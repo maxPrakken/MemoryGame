@@ -123,26 +123,23 @@ namespace Concept
 
         public void AssignGrid()
         {
-            if (players.Count == 1)
+            switch(players.Count)
             {
-                CreateGrid(4);
-            }
-            else if (players.Count == 2)
-            {
-                CreateGrid(6);
-            }
-            else if (players.Count == 3)
-            {
-                CreateGrid(8);
-            }
-            else if (players.Count == 4)
-            {
-                CreateGrid(10);
-            }
-            else
-            {
-                throw new System.ArgumentException("player count is 0 or more then 4, please be more carefull in the future");
-            }
+                case 1:
+                    CreateGrid(4);
+                    break;
+                case 2:
+                    CreateGrid(6);
+                    break;
+                case 3:
+                    CreateGrid(8);
+                    break;
+                case 4:
+                    CreateGrid(10);
+                    break;
+                default:
+                    throw new System.ArgumentException("player count is 0 or more then 4, please be more carefull in the future");
+            }            
         }
 
         public void CreateGrid(int size) // give even number
