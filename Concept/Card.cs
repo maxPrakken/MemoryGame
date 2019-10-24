@@ -44,6 +44,7 @@ namespace Concept
             {
                 FlipManager();
                 _mg.UpdateScores();
+                _mg.UpdateAllScores();
             }
         }
 

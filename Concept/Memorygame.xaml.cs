@@ -75,6 +75,21 @@ namespace Concept
             }
         }
 
+        public void UpdateAllScores()
+        {
+            foreach (TextBox t in psList.Children)
+            {
+                foreach(Player p in players)
+                {
+                    if (t.Text.Contains("score") && t.Text.Contains(p.name))
+                    {
+                        string input = p.name + " score: " + p.score.ToString();
+                        t.Text = input;
+                    }
+                }
+            }
+        }
+
         public void CreatePlayerScores()
         {
             psList.Orientation = Orientation.Vertical;
