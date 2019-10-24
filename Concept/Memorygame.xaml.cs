@@ -36,6 +36,8 @@ namespace Concept
             CreateGrid(4); // create grid with set size, give it a even number or it'll throw an exception
 
             this.Content = DP; // give the content
+            ScoreSwap sc = new ScoreSwap();
+            players = sc.ShuffleScore(players);
         }
         public Memorygame(List<string> players)
         {

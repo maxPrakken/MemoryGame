@@ -26,15 +26,18 @@ namespace Concept
         {
 
         }
-        public ScoreSwap(List<Player> pl)
+        
+        public List<Player> ShuffleScore(List<Player> pl)
         {
-            this.pl = pl;
+            Shuffle(pl);
 
-            Shuffle<Player>(pl);
+            return pl;
         }
 
-        public void Shuffle<T>(IList<T> list)
+        private void Shuffle<T>(IList<T> list) // input players list
         {
+            List<Player> ns = (List<Player>)list;
+
             int n = list.Count;
             while (n > 1)
             {
@@ -43,6 +46,13 @@ namespace Concept
                 T value = list[k];
                 list[k] = list[n];
                 list[n] = value;
+            }
+
+            List<Player> sl = (List<Player>)list;
+
+            for(int i = 0; i < list.Count; i++)
+            {
+                ns[i].score = sl[i].score;
             }
         }
     }
