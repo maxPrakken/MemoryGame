@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Controls.Primitives;
 using System.Windows.Input;
 
 namespace Concept
@@ -22,8 +23,6 @@ namespace Concept
         List<Player> players = new List<Player>(); // list of players
 
         private Memorygame _mg;
-
-        Powerup powerup;
 
         Player cp;
         int currentCP = 0;
@@ -59,8 +58,6 @@ namespace Concept
 
             CyclePlayers();
             AssignGrid();
-
-            powerup = new ShuffleCards(_mg);
 
             this.Content = DP; // give the content
         }
@@ -222,7 +219,10 @@ namespace Concept
             if (e.Key == Key.E) // check key
             {
                 e.Handled = true; // set handled to true
-                powerup.Use();
+                if (cp.powerup != null)
+                {
+                    cp.powerup.Use();
+                }
             }
         }
     }

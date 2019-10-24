@@ -19,7 +19,7 @@ namespace Concept
 
         public virtual void Use()
         {
-
+            isused = false;
         }
     }
 
@@ -40,10 +40,12 @@ namespace Concept
 
         public override void Use()
         {
+            base.Use();
+
             ShuffleScore(this.pl);
         }
 
-        public List<Player> ShuffleScore(List<Player> pl)
+        public void ShuffleScore(List<Player> pl)
         {
             List<int> scores = new List<int>();
             foreach(Player p in pl)
@@ -56,8 +58,6 @@ namespace Concept
             {
                 pl[i].score = scores[i];
             }
-
-            return pl;
         }
     }
 
@@ -66,6 +66,11 @@ namespace Concept
         public ThemeSwap()
         {
 
+        }
+
+        public override void Use()
+        {
+            base.Use();
         }
     }
 
@@ -85,6 +90,7 @@ namespace Concept
 
         public override void Use()
         {
+            base.Use();
             _mg.RandomOrder();
         }
     }

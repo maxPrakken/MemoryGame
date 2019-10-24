@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace Concept
 {
-    public class Player
+    class Player
     {
         public string name;
         public int score = 0;
-        
+        public Powerup powerup;
 
         public Player()
         {
