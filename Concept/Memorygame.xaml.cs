@@ -5,12 +5,14 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Controls.Primitives;
 using System.Windows.Input;
+using System.Windows.Threading;
 
 namespace Concept
 {
     public partial class Memorygame : Page
     {
-
+        DispatcherTimer dt = new DispatcherTimer();
+       
         WrapPanel wp = new WrapPanel(); // initialise wrap panel
         
         DockPanel DP = new DockPanel(); // main panel
@@ -48,7 +50,12 @@ namespace Concept
             playerNames = players;
 
             _mg = this;
-                       
+
+            dt.Tick += new EventHandler(timer_Tick);
+            dt.Interval = new TimeSpan(0, 0, 30); // execute every hour
+            dt.Start();
+
+
             CreatePlayers();
             
             CreatePlayerScores();
@@ -224,6 +231,11 @@ namespace Concept
                     cp.powerup.Use();
                 }
             }
+        }
+    
+        private void timer_Tick(object sender, EventArgs e)
+        {
+            CyclePlayers(); 
         }
     }
 }
