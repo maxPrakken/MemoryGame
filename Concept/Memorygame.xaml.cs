@@ -24,7 +24,7 @@ namespace Concept
 
         int turntime = 0;
         int curtime = 30;
-        TextBlock turnCountdown = new TextBlock();
+        TextBox turnCountdown = new TextBox();
 
         List<string> playerNames = new List<string>();
         List<Card> pc = new List<Card>(); // selected cards
