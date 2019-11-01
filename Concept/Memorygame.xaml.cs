@@ -23,7 +23,7 @@ namespace Concept
         TextBox cpp = new TextBox(); // current player display
 
         int turntime = 0;
-        int curtime = 30;
+        public int curtime = 30;
         TextBox turnCountdown = new TextBox();
 
         List<string> playerNames = new List<string>();
@@ -163,7 +163,8 @@ namespace Concept
             {
                 powerbutton.Content = "No powerup available right now";
             }
-            
+
+            curtime = 30;
         }
 
         public void CreatePlayers()
@@ -348,7 +349,6 @@ namespace Concept
             if (curtime <= turntime)
             {
                 CyclePlayers();
-                curtime = 30;
             }
         }
     }

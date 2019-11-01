@@ -75,6 +75,8 @@ namespace Concept
                             pc.Clear();
 
                             wp.IsHitTestVisible = true;
+
+                            _mg.curtime = 30;
                         });
                     }
                     );
