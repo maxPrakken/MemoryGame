@@ -30,6 +30,8 @@ namespace Concept
         List<Card> pc = new List<Card>(); // selected cards
         List<Player> players = new List<Player>(); // list of players
 
+        Button powerbutton = new Button();
+
         private Memorygame _mg;
 
         private int powerupDropChance = 100;
@@ -58,6 +60,10 @@ namespace Concept
             turnCountdown.Width = 300;
             turnCountdown.Height = 200;
 
+            powerbutton.Width = 300;
+            powerbutton.Height = 200;
+            powerbutton.Click += PowerButton_Click;
+
             playerNames = players;
 
             _mg = this;
@@ -73,6 +79,7 @@ namespace Concept
             psList.Children.Add(turnCountdown);
             DP.Children.Add(psList);
             DP.Children.Add(wp);
+            DP.Children.Add(powerbutton);
 
             CyclePlayers();
             AssignGrid();
@@ -145,6 +152,15 @@ namespace Concept
                 cp = players[currentCP];
                 cpp.Text = cp.name;
             }
+
+            if (cp.powerup != null)
+            {
+                powerbutton.Content = cp.powerup.name;
+            }else
+            {
+                powerbutton.Content = "No powerup available right now";
+            }
+            
         }
 
         public void CreatePlayers()
@@ -300,6 +316,15 @@ namespace Concept
                 list[n] = value; // assign new value
             }
         }
+
+        private void PowerButton_Click(object sender, RoutedEventArgs e) // click event/function [works more like event]
+        {
+            if (cp.powerup != null)
+            {
+                cp.powerup.Use();
+            }
+        }
+
 
         private void Window_KeyDown(object sender, KeyEventArgs e) // key down function, is any key
         {

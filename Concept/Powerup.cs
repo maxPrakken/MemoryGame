@@ -11,6 +11,7 @@ namespace Concept
     class Powerup
     {
         public bool isused;
+        public string name;
 
         public Powerup()
         {
@@ -36,6 +37,7 @@ namespace Concept
         public ScoreSwap(List<Player> pl)
         {
             this.pl = pl;
+            name = "Score Swap";
         }
 
         public override void Use()
@@ -73,6 +75,7 @@ namespace Concept
         public ThemeSwap(Memorygame _mg)
         {
             this._mg = _mg;
+            name = "Theme Swap";
         }
 
         public override void Use()
@@ -94,6 +97,7 @@ namespace Concept
         public ShuffleCards(Memorygame _mg)
         {
             this._mg = _mg;
+            name = "Shuffle Cards";
         }
 
         public override void Use()
