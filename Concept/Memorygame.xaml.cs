@@ -87,8 +87,8 @@ namespace Concept
 
             CyclePlayers();
             AssignGrid();
-            SetTheme();
 
+            SetTheme();
             this.Content = DP; // give the content
         }
 
@@ -144,18 +144,17 @@ namespace Concept
 
         public void CyclePlayers()
         {
-            if (currentCP < players.Count)
+            try
             {
-                cp = players[currentCP];
-                cpp.Text = cp.name;
                 currentCP++;
+                cp = players[currentCP];
             }
-            else
+            catch
             {
                 currentCP = 0;
                 cp = players[currentCP];
-                cpp.Text = cp.name;
             }
+            cpp.Text = cp.name;
 
             if (cp.powerup != null)
             {
