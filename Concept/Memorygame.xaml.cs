@@ -17,7 +17,7 @@ namespace Concept
 
         WrapPanel wp = new WrapPanel(); // initialise wrap panel
 
-        DockPanel DP = new DockPanel(); // main panel
+        Canvas DP = new Canvas(); // main panel
 
         StackPanel psList = new StackPanel(); // list of score textboxes
         TextBox cpp = new TextBox(); // current player display
@@ -48,7 +48,7 @@ namespace Concept
 
             CreateGrid(4); // create grid with set size, give it a even number or it'll throw an exception
 
-            this.Content = DP; // give the content
+            this.Content = DP; // give the content\
         }
         public Memorygame(List<string> players)
         {
@@ -77,9 +77,13 @@ namespace Concept
             CreatePlayerScores();
 
             psList.Children.Add(turnCountdown);
+
             DP.Children.Add(psList);
             DP.Children.Add(wp);
             DP.Children.Add(powerbutton);
+
+            Canvas.SetLeft(wp, 500);
+            Canvas.SetLeft(powerbutton, 1200);
 
             CyclePlayers();
             AssignGrid();
