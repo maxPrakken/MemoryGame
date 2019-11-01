@@ -22,6 +22,10 @@ namespace Concept
         StackPanel psList = new StackPanel(); // list of score textboxes
         TextBox cpp = new TextBox(); // current player display
 
+        int turntime = 0;
+        int curtime = 30;
+        TextBlock turnCountdown = new TextBlock();
+
         List<string> playerNames = new List<string>();
         List<Card> pc = new List<Card>(); // selected cards
         List<Player> players = new List<Player>(); // list of players
@@ -51,24 +55,26 @@ namespace Concept
             wp.Width = 500; // set wrappanel width
             wp.Height = 500; // set wrappanel height
 
+            turnCountdown.Width = 300;
+            turnCountdown.Height = 200;
+
             playerNames = players;
 
             _mg = this;
 
             dt.Tick += new EventHandler(timer_Tick);
-            dt.Interval = new TimeSpan(0, 0, 30); // execute every hour
+            dt.Interval = new TimeSpan(0, 0, 1); // execute every 30 second
             dt.Start();
-
 
             CreatePlayers();
 
             CreatePlayerScores();
 
+            psList.Children.Add(turnCountdown);
             DP.Children.Add(psList);
             DP.Children.Add(wp);
-           
 
-                      CyclePlayers();
+            CyclePlayers();
             AssignGrid();
             SetTheme();
 
@@ -309,7 +315,13 @@ namespace Concept
     
         private void timer_Tick(object sender, EventArgs e)
         {
-            CyclePlayers(); 
+            curtime--;
+            turnCountdown.Text = curtime.ToString();
+            if (curtime <= turntime)
+            {
+                CyclePlayers();
+                curtime = 30;
+            }
         }
     }
 }
