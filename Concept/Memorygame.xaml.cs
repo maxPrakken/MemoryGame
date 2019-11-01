@@ -5,6 +5,8 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Controls.Primitives;
 using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
 using System.Windows.Threading;
 
 namespace Concept
@@ -12,9 +14,9 @@ namespace Concept
     public partial class Memorygame : Page
     {
         DispatcherTimer dt = new DispatcherTimer();
-       
+
         WrapPanel wp = new WrapPanel(); // initialise wrap panel
-        
+
         DockPanel DP = new DockPanel(); // main panel
 
         StackPanel psList = new StackPanel(); // list of score textboxes
@@ -25,6 +27,8 @@ namespace Concept
         List<Player> players = new List<Player>(); // list of players
 
         private Memorygame _mg;
+
+        private int powerupDropChance = 100;
 
         Player cp;
         int currentCP = 0;
@@ -57,23 +61,25 @@ namespace Concept
 
 
             CreatePlayers();
-            
+
             CreatePlayerScores();
 
             DP.Children.Add(psList);
             DP.Children.Add(wp);
+           
 
-            CyclePlayers();
+                      CyclePlayers();
             AssignGrid();
+            SetTheme();
 
             this.Content = DP; // give the content
         }
 
         public void UpdateScores()
         {
-            foreach(TextBox t in psList.Children)
+            foreach (TextBox t in psList.Children)
             {
-                if(t.Text.Contains("score") && t.Text.Contains(cp.name))
+                if (t.Text.Contains("score") && t.Text.Contains(cp.name))
                 {
                     string input = cp.name + " score: " + cp.score.ToString();
                     t.Text = input;
@@ -85,7 +91,7 @@ namespace Concept
         {
             foreach (TextBox t in psList.Children)
             {
-                foreach(Player p in players)
+                foreach (Player p in players)
                 {
                     if (t.Text.Contains("score") && t.Text.Contains(p.name))
                     {
@@ -107,7 +113,7 @@ namespace Concept
             psList.Children.Add(cpp);
 
             for (int i = 0; i < players.Count; i++)
-            { 
+            {
                 TextBox sc = new TextBox();
                 sc.IsReadOnly = true;
                 sc.BorderThickness = new Thickness(0);
@@ -121,7 +127,7 @@ namespace Concept
 
         public void CyclePlayers()
         {
-            if(currentCP < players.Count)
+            if (currentCP < players.Count)
             {
                 cp = players[currentCP];
                 cpp.Text = cp.name;
@@ -146,7 +152,7 @@ namespace Concept
 
         public void AssignGrid()
         {
-            switch(players.Count)
+            switch (players.Count)
             {
                 case 1:
                     CreateGrid(4);
@@ -162,7 +168,7 @@ namespace Concept
                     break;
                 default:
                     throw new System.ArgumentException("player count is 0 or more then 4, please be more carefull in the future");
-            }            
+            }
         }
 
         public void CreateGrid(int size) // give even number
@@ -176,12 +182,50 @@ namespace Concept
             {
                 int type = i / 2; // set type
 
+
+
                 Card btn = new Card(type, wp.Width, size, wp, pc, _mg); // initialize class Card, Card derives from Button
                 wp.Children.Add(btn); // add the card to the  wrappanel
             }
 
             RandomOrder(); // give the wrappanel a random order
-        } 
+        }
+
+        public void SetTheme()
+        {
+            foreach (Card c in wp.Children)
+            {
+                string s = "1_" + c.type.ToString() + ".png";
+
+                var brush = new ImageBrush();
+                brush.ImageSource = new BitmapImage(new Uri(s, UriKind.Relative));
+                c.backgroundimg = brush;
+            }
+        }
+
+        public void SwapTheme()
+        {
+
+            foreach (Card c in wp.Children)
+            {
+                ImageBrush IB = c.backgroundimg as ImageBrush;
+                string source = IB.ImageSource.ToString();
+                string s;
+                if (source.Contains("1_"))
+                {
+                    s = "2_" + c.type.ToString() + ".png";
+                }
+
+                else
+                {
+                    s = "1_" + c.type.ToString() + ".png";                   
+                }
+
+                var brush = new ImageBrush();
+                brush.ImageSource = new BitmapImage(new Uri(s, UriKind.Relative));
+                c.backgroundimg = brush;
+            }
+        }
 
         public void RandomOrder() // function that empties and fills the wrappanel for randomisation
         {
@@ -201,9 +245,39 @@ namespace Concept
             }
         }
 
+        public void PowerupLottery()
+        {
+            Random random = new Random();
+            int randomNum = random.Next(100);
+            if(randomNum <= powerupDropChance)
+            {
+                int randomP = random.Next(1, 4);
+
+                switch(randomP)
+                {
+                    case 1:
+                        Powerup p = new ShuffleCards(this);
+                        cp.powerup = p;
+                        break;
+                    case 2:
+                        Powerup p1 = new ScoreSwap(players);
+                        cp.powerup = p1;
+                        break;
+                    case 3:
+                        Powerup p2 = new ThemeSwap(this);
+                        cp.powerup = p2;
+                        break;
+                    default:
+                        throw new System.ArgumentException("please fix");
+                        break;
+                }
+            }
+        }
+
         public void AddPoints(int points)
         {
             cp.score += points;
+            PowerupLottery();
             Console.WriteLine(cp.name + " " + cp.score);
         }
 

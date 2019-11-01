@@ -63,14 +63,22 @@ namespace Concept
 
     class ThemeSwap : Powerup
     {
+        Memorygame _mg;
+
         public ThemeSwap()
         {
 
         }
 
+        public ThemeSwap(Memorygame _mg)
+        {
+            this._mg = _mg;
+        }
+
         public override void Use()
         {
             base.Use();
+            _mg.SwapTheme();
         }
     }
 

@@ -4,7 +4,8 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
-
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
 
 namespace Concept
 {
@@ -14,6 +15,9 @@ namespace Concept
         private List<Card> pc = new List<Card>();
         WrapPanel wp = new WrapPanel();
         Memorygame _mg;
+
+        public ImageBrush backgroundimg = new ImageBrush();
+        public ImageBrush defaultBG = new ImageBrush();
 
         public Card() // default constructor
         {
@@ -25,20 +29,21 @@ namespace Concept
         }
         public Card(int type, double width, int size, WrapPanel wp, List<Card> pc, Memorygame _mg) // override constructor [USE THIS ONE]
         {
-
+            defaultBG.ImageSource = new BitmapImage(new Uri("BG.png", UriKind.Relative));
             this.type = type; // assign type given by main
-            Content = "test"; // temporary content
             Width = width / size; // dynamic width according to amount of Cards given by size
             Height = width / size; // dynamic height according to amount of Cards given by size
             this.Click += Button1_Click; // subscribes the click event to a function
             this.pc = pc;
             this.wp = wp;
             this._mg = _mg;
+
+            this.Background = defaultBG;
         }
 
         private void Button1_Click(object sender, RoutedEventArgs e) // click event/function [works more like event]
         {
-            this.Content = type; // show type as
+            this.Background = backgroundimg;
 
             if (this.IsEnabled)
             {
@@ -60,17 +65,24 @@ namespace Concept
 
                 if (pc[0].type == pc[1].type && pc[0] != pc[1])
                 {
-                    _mg.AddPoints(100);
-                    pc[0].IsEnabled = false;
-                    pc[1].IsEnabled = false;
-                    pc.Clear();
+                    Task.Delay(2000).ContinueWith(_ =>
+                    {
+                        this.Dispatcher.Invoke(() =>
+                        {
+                            _mg.AddPoints(100);
+                            pc[0].IsEnabled = false;
+                            pc[1].IsEnabled = false;
+                            pc.Clear();
 
-                    wp.IsHitTestVisible = true;
+                            wp.IsHitTestVisible = true;
+                        });
+                    }
+                    );
                 }
                 else if (pc[0] == pc[1])
                 {
-                    pc[0].Content = "test";
-                    pc[1].Content = "test";
+                    pc[0].Background = defaultBG;
+                    pc[1].Background = defaultBG;
                     pc.Clear();
                     wp.IsHitTestVisible = true;
                     return;
@@ -81,8 +93,8 @@ namespace Concept
                     {
                         this.Dispatcher.Invoke(() =>
                         {
-                            pc[0].Content = "test";
-                            pc[1].Content = "test";
+                            pc[0].Background = defaultBG;
+                            pc[1].Background = defaultBG;
                             pc.Clear();
 
                             wp.IsHitTestVisible = true;

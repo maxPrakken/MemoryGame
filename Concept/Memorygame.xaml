@@ -8,6 +8,5 @@
       d:DesignHeight="565.768" d:DesignWidth="565.359"
       Title="Memorygame"
       KeyDown="Window_KeyDown">
-
-    <Grid/>
+    
 </Page>
