@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -21,6 +23,9 @@ namespace Concept
 
         StackPanel psList = new StackPanel(); // list of score textboxes
         TextBox cpp = new TextBox(); // current player display
+
+        StackPanel pmenu = new StackPanel(); // pause menu panel
+        bool paused = false;
 
         int turntime = 0;
         public int curtime = 30;
@@ -69,7 +74,7 @@ namespace Concept
             _mg = this;
 
             dt.Tick += new EventHandler(timer_Tick);
-            dt.Interval = new TimeSpan(0, 0, 1); // execute every 30 second
+            dt.Interval = new TimeSpan(0, 0, 1); // execute every second
             dt.Start();
 
             CreatePlayers();
@@ -81,12 +86,14 @@ namespace Concept
             DP.Children.Add(psList);
             DP.Children.Add(wp);
             DP.Children.Add(powerbutton);
+            DP.Children.Add(pmenu);
 
             Canvas.SetLeft(wp, 500);
             Canvas.SetLeft(powerbutton, 1200);
 
             CyclePlayers();
             AssignGrid();
+            BuildPauseMenu();
 
             SetTheme();
             this.Content = DP; // give the content
@@ -307,6 +314,83 @@ namespace Concept
             Console.WriteLine(cp.name + " " + cp.score);
         }
 
+        private void BuildPauseMenu()
+        {
+            pmenu.Orientation = Orientation.Vertical;
+            Canvas.SetZIndex(pmenu, 1);
+            Canvas.SetLeft(pmenu, 500);
+            pmenu.Visibility = Visibility.Collapsed;
+
+            Button resumeb = new Button();
+            Button SafeGameb = new Button();
+            Button Quitb = new Button();
+
+            resumeb.Width = 300;
+            resumeb.Height = 200;
+            SafeGameb.Width = 300;
+            SafeGameb.Height = 200;
+            Quitb.Width = 300;
+            Quitb.Height = 200;
+
+            resumeb.Content = "Resume Game";
+            SafeGameb.Content = "Safe Game";
+            Quitb.Content = "Quit Game";
+
+            resumeb.Click += Resumeb_Click;
+            SafeGameb.Click += SafeGameb_Click;
+            Quitb.Click += Quitb_Click;
+
+            pmenu.Children.Add(resumeb);
+            pmenu.Children.Add(SafeGameb);
+            pmenu.Children.Add(Quitb);
+        }
+
+        public void SaveGame() // touch this code and i will strangle you in your sleep :)
+        {
+            string OneStringToSaveThemAll = ""; // the motherload string that holds all the other strings
+
+            foreach(Player p in players)
+            {
+                string ps = "";
+
+                if (p.powerup != null)
+                {
+                    ps += p.name.ToString() + "," + p.score.ToString() + "," + p.powerup.name.ToString() + "|";
+                }
+                else
+                {
+                    ps += p.name.ToString() + "," + p.score.ToString() + "," + "np" + "|";
+                }
+                OneStringToSaveThemAll += ps;
+            }
+
+            OneStringToSaveThemAll += " "; // add space inbetween players and cards to sperate them when loading
+
+            foreach(Card c in wp.Children)
+            {
+                ImageBrush IB = c.backgroundimg as ImageBrush;
+                string source = IB.ImageSource.ToString();
+
+                string cards = c.type.ToString() + "," + source + "|";
+                OneStringToSaveThemAll += cards;
+            }
+
+            OneStringToSaveThemAll += " "; // add space inbetween cards and turn to sperate them when loading
+
+            OneStringToSaveThemAll += cp.name.ToString();
+
+            string rootPath = System.Reflection.Assembly.GetExecutingAssembly().GetName().CodeBase;
+            rootPath = System.IO.Path.GetDirectoryName(rootPath);
+
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.InitialDirectory = rootPath + "../../../"; 
+            saveFileDialog.Filter = "Save File (*.sav)|*.sav";
+            if (saveFileDialog.ShowDialog() == true)
+            {
+                File.WriteAllText(saveFileDialog.FileName, OneStringToSaveThemAll);
+            }
+        }
+
         private static Random rng = new Random(); // initialize RNJezus
         public static void ShuffleCards<T>(IList<T> list) // function that shuffles cards
         {
@@ -321,6 +405,23 @@ namespace Concept
             }
         }
 
+        private void Resumeb_Click(object sender, RoutedEventArgs e) // click event/function [works more like event]
+        {
+            pmenu.Visibility = Visibility.Collapsed;
+            paused = false;
+        }
+
+        private void SafeGameb_Click(object sender, RoutedEventArgs e) // click event/function [works more like event]
+        {
+            SaveGame();
+        }
+
+        private void Quitb_Click(object sender, RoutedEventArgs e) // click event/function [works more like event]
+        {
+            System.Diagnostics.Process.Start(Application.ResourceAssembly.Location); // restarts the application bringing you back to the home screen
+            Application.Current.Shutdown(); // shut the old running application down
+        }
+
         private void PowerButton_Click(object sender, RoutedEventArgs e) // click event/function [works more like event]
         {
             if (cp.powerup != null)
@@ -329,26 +430,34 @@ namespace Concept
             }
         }
 
-
         private void Window_KeyDown(object sender, KeyEventArgs e) // key down function, is any key
         {
-            if (e.Key == Key.E) // check key
+            if (e.Key == Key.Escape) // check key
             {
                 e.Handled = true; // set handled to true
-                if (cp.powerup != null)
+                if(pmenu.Visibility == Visibility.Visible)
                 {
-                    cp.powerup.Use();
+                    pmenu.Visibility = Visibility.Collapsed;
+                    paused = false;
+                }
+                else
+                {
+                    pmenu.Visibility = Visibility.Visible;
+                    paused = true;
                 }
             }
         }
     
         private void timer_Tick(object sender, EventArgs e)
         {
-            curtime--;
-            turnCountdown.Text = curtime.ToString();
-            if (curtime <= turntime)
+            if (!paused)
             {
-                CyclePlayers();
+                curtime--;
+                turnCountdown.Text = curtime.ToString();
+                if (curtime <= turntime)
+                {
+                    CyclePlayers();
+                }
             }
         }
     }

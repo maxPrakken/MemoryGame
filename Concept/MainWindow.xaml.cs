@@ -142,13 +142,7 @@ namespace Concept
                     playerList.Clear();
                 }
             }
-            
-                        
-            //start the game here and send the list to the game
         }
-        
-        
-        
         
         public void TextBoxPlace(int count)
         {
