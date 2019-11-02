@@ -11,6 +11,7 @@ namespace Concept
         public string name;
         public int score = 0;
         public Powerup powerup;
+        public string creditPU = "";
 
         public Player()
         {

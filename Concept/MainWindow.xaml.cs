@@ -13,6 +13,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Collections.ObjectModel;
+using Microsoft.Win32;
+using System.IO;
 
 namespace Concept
 {
@@ -53,7 +55,12 @@ namespace Concept
 
         private void Button_resume_Click(object sender, RoutedEventArgs e)
         {
-            //do something here to resume the save(d) game
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            if (openFileDialog.ShowDialog() == true)
+            {
+                Memorygame mg = new Memorygame(File.ReadAllText(openFileDialog.FileName));
+                this.Content = mg;
+            }
         }
 
         private void Button_highscore_Click(object sender, RoutedEventArgs e)

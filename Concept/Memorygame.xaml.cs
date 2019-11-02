@@ -99,6 +99,44 @@ namespace Concept
             this.Content = DP; // give the content
         }
 
+        public Memorygame(string s)
+        {
+            InitializeComponent(); // no clue what it does but dont remove it
+
+            wp.Width = 500; // set wrappanel width
+            wp.Height = 500; // set wrappanel height
+
+            _mg = this;
+
+            LoadGame(s); // loads the game from previous saved file
+            CreatePlayerScores();
+
+            turnCountdown.Width = 300;
+            turnCountdown.Height = 200;
+
+            powerbutton.Width = 300;
+            powerbutton.Height = 200;
+            powerbutton.Click += PowerButton_Click;
+
+            dt.Tick += new EventHandler(timer_Tick);
+            dt.Interval = new TimeSpan(0, 0, 1); // execute every second
+            dt.Start();
+
+            psList.Children.Add(turnCountdown);
+
+            DP.Children.Add(psList);
+            DP.Children.Add(wp);
+            DP.Children.Add(powerbutton);
+            DP.Children.Add(pmenu);
+
+            Canvas.SetLeft(wp, 500);
+            Canvas.SetLeft(powerbutton, 1200);
+
+            BuildPauseMenu();
+
+            this.Content = DP; // give the content
+        }
+
         public void UpdateScores()
         {
             foreach (TextBox t in psList.Children)
@@ -343,6 +381,58 @@ namespace Concept
             pmenu.Children.Add(resumeb);
             pmenu.Children.Add(SafeGameb);
             pmenu.Children.Add(Quitb);
+        }
+
+        public void LoadGame(string s)
+        {
+            string playerstr = ""; // empty players string
+            string cardstr = ""; // empty cards string
+            string turn = ""; // empty turn string
+
+            string[] stringmaster = s.Split(' '); // string array stringmaster fills 3 indexes with values from s 
+
+            playerstr = stringmaster[0]; // playerstring equals stringmaster index 0
+            cardstr = stringmaster[1]; // cardstring equals stringmaster index 1
+            turn = stringmaster[2]; // turn equals stringmaster index 2
+
+            //players loading
+            string[] playersArray = playerstr.Split('|'); // split all players into array
+
+            for(int i = 0; i < playersArray.Length - 1; i++) // loop through all players
+            {
+                string[] playerDetails = playersArray[i].Split(','); // split player up in its details
+                Player p = new Player(); // make new player
+                p.name = playerDetails[0]; // set name equal to playerdetails name
+                p.score = Convert.ToInt32(playerDetails[1]); // set score equa to playerdetails score
+                p.creditPU = playerDetails[2]; // give player credit for a powerup, needs to be added later due to dependency
+
+                players.Add(p); // add player to the players list
+            }
+
+            //cards loading
+            string[] cardsArray = cardstr.Split('|'); // splits all cards into array
+
+            for(int i = 0; i < cardsArray.Length - 1; i++)
+            { 
+                string[] cardsDetails = cardsArray[i].Split(',');
+                int size = Convert.ToInt32(Math.Sqrt(cardsArray.Length));
+                int type = Convert.ToInt32(cardsDetails[0]);
+                Card c = new Card(type, wp.Width, size, wp, pc, _mg);
+
+                var brush = new ImageBrush();
+                brush.ImageSource = new BitmapImage(new Uri(cardsDetails[1], UriKind.Relative));
+                c.backgroundimg = brush;
+
+                wp.Children.Add(c);
+            }
+
+            foreach(Player p in players)
+            {
+                if(p.name == turn)
+                {
+                    cp = p;
+                }
+            }
         }
 
         public void SaveGame() // touch this code and i will strangle you in your sleep :)
