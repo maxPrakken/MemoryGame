@@ -1,2 +1,3 @@
 .vs/
-.sav
+*.sav
+!spec/*.sav
