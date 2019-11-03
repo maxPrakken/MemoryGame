@@ -18,11 +18,14 @@ using System.IO;
 
 namespace Concept
 {
+    /*! \brief mainwindow class, first window you see and the menu
+       */
     public partial class MainWindow : Window
     {
-        List<string> playerList;
-        
+        List<string> playerList; /*!< list of players */
 
+        /*! \brief eventlistner for if window closes
+       */
         protected override void OnClosed(EventArgs e) // shuts down program when main window is closed
         {
             base.OnClosed(e); // starts closing window event
@@ -30,6 +33,8 @@ namespace Concept
             Application.Current.Shutdown(); // shuts down application
         }
 
+        /*! \brief default constructor
+       */
         public MainWindow()
         {
             InitializeComponent(); // call the xaml file
@@ -39,6 +44,8 @@ namespace Concept
             this.Show(); // show content of window
         }
 
+        /*! \brief eventlistner for start button
+       */
         private void Button_start_Click(object sender, RoutedEventArgs e) // click event/function [works more like event]
         {
             p1.Visibility = Visibility.Visible;
@@ -53,6 +60,8 @@ namespace Concept
             quitbtn.Visibility = Visibility.Collapsed;
         }
 
+        /*! \brief eventlistner for resume button
+       */
         private void Button_resume_Click(object sender, RoutedEventArgs e)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
@@ -63,32 +72,50 @@ namespace Concept
             }
         }
 
+        /*! \brief eventlistner for highscore button
+       */
         private void Button_highscore_Click(object sender, RoutedEventArgs e)
         {
             //go to highscore menu here
         }
 
+        /*! \brief eventlistner for quit button
+       */
         private void Button_quit_Click(object sender, RoutedEventArgs e)
         {
             Application.Current.Shutdown(); // shuts down application
         }
 
+        /*! \brief eventlistner for 1 spelers select
+       */
         private void Button_1speler_Click(object sender, RoutedEventArgs e)
         {
             TextBoxPlace(1);
         }
+
+        /*! \brief eventlistner for 2 spelers select
+       */
         private void Button_2speler_Click(object sender, RoutedEventArgs e)
         {
             TextBoxPlace(2);
         }
+
+        /*! \brief eventlistner for 3 spelers select
+       */
         private void Button_3speler_Click(object sender, RoutedEventArgs e)
         {
             TextBoxPlace(3);
         }
+
+        /*! \brief eventlistner for 4 spelers select
+       */
         private void Button_4speler_Click(object sender, RoutedEventArgs e)
         {
             TextBoxPlace(4);
         }
+
+        /*! \brief eventlistner for back button
+       */
         private void BackButton_Click(object sender, RoutedEventArgs e)
         // Back Button 
         {
@@ -110,6 +137,9 @@ namespace Concept
             p4name.Visibility = Visibility.Collapsed;
         }
 
+
+        /*! \brief eventlistner for final game start button
+       */
         private void ButtonGameStart_Click(object sender, RoutedEventArgs e)
         {
             if(p1name.Text != "" && p1name.Text != "name. . ." && p1name.Text != null)
@@ -150,7 +180,9 @@ namespace Concept
                 }
             }
         }
-        
+
+        /*! \brief places the textboxes to input your name
+       */
         public void TextBoxPlace(int count)
         {
             switch(count) {
@@ -205,11 +237,5 @@ namespace Concept
             
         }
 
-       
-
-        private void p3name_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
     }
 }

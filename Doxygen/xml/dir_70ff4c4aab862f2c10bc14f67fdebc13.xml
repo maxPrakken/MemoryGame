@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+  <compounddef id="dir_70ff4c4aab862f2c10bc14f67fdebc13" kind="dir">
+    <compoundname>E:/desktop/MemoryGame/Concept</compoundname>
+    <innerfile refid="_app_8xaml_8cs">App.xaml.cs</innerfile>
+    <innerfile refid="_card_8cs">Card.cs</innerfile>
+    <innerfile refid="_highscores_8cs">Highscores.cs</innerfile>
+    <innerfile refid="_main_window_8xaml_8cs">MainWindow.xaml.cs</innerfile>
+    <innerfile refid="_memorygame_8xaml_8cs">Memorygame.xaml.cs</innerfile>
+    <innerfile refid="_player_8cs">Player.cs</innerfile>
+    <innerfile refid="_powerup_8cs">Powerup.cs</innerfile>
+    <innerfile refid="_selectplayers_8xaml_8cs">Selectplayers.xaml.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="E:/desktop/MemoryGame/Concept/"/>
+  </compounddef>
+</doxygen>

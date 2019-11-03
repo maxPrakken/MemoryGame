@@ -13,38 +13,40 @@ using System.Windows.Threading;
 
 namespace Concept
 {
+    /*! \brief MemoryGame class, the main class of the game
+       */
     public partial class Memorygame : Page
     {
-        DispatcherTimer dt = new DispatcherTimer();
+        DispatcherTimer dt = new DispatcherTimer(); /*!< timer responsible for time limit */
 
-        WrapPanel wp = new WrapPanel(); // initialise wrap panel
+        WrapPanel wp = new WrapPanel(); /*!<  initialise wrap panel */
 
-        Canvas DP = new Canvas(); // main panel
+        Canvas DP = new Canvas(); /*!<  main panel */
 
-        StackPanel psList = new StackPanel(); // list of score textboxes
-        TextBox cpp = new TextBox(); // current player display
+        StackPanel psList = new StackPanel(); /*!<  list of score textboxes */
+        TextBox cpp = new TextBox(); /*!<  current player display */
 
-        StackPanel pmenu = new StackPanel(); // pause menu panel
-        bool paused = false;
+        StackPanel pmenu = new StackPanel(); /*!<  pause menu panel */
+        bool paused = false; /*!< to check if game should be frozen */
 
-        int turntime = 0;
-        public int curtime = 30;
-        TextBox turnCountdown = new TextBox();
+        int turntime = 0; /*!< lowest point of timer */
+        public int curtime = 30; /*!< reset point of timer */
+        TextBox turnCountdown = new TextBox(); /*!< displays timer */
 
-        List<string> playerNames = new List<string>();
+        List<string> playerNames = new List<string>(); /*!< player names */
         List<Card> pc = new List<Card>(); // selected cards
         List<Player> players = new List<Player>(); // list of players
 
-        Button powerbutton = new Button();
+        Button powerbutton = new Button(); /*!< activated current players powerup */
 
-        private Memorygame _mg;
+        private Memorygame _mg; /*!< local instance of MemoryGame class */
 
-        private int powerupDropChance = 100;
+        private int powerupDropChance = 20; /*!< procentage change to get a powerup after score a point */
 
-        Player cp;
+        Player cp; /*!< current player */
         int currentCP = 0;
 
-        public Memorygame() // main function
+        public Memorygame() /*!<  main contructor */
         {
             InitializeComponent(); // no clue what it does but dont remove it
 
@@ -55,6 +57,9 @@ namespace Concept
 
             this.Content = DP; // give the content\
         }
+
+        /*! \brief overridden constructor for getting player names
+        */
         public Memorygame(List<string> players)
         {
             InitializeComponent(); // no clue what it does but dont remove it
@@ -99,6 +104,8 @@ namespace Concept
             this.Content = DP; // give the content
         }
 
+        /*! \brief overridden constructor
+        */
         public Memorygame(string s)
         {
             InitializeComponent(); // no clue what it does but dont remove it
@@ -137,6 +144,8 @@ namespace Concept
             this.Content = DP; // give the content
         }
 
+        /*! \brief  updates the score of the current player in the corresponding textbox
+        */
         public void UpdateScores()
         {
             foreach (TextBox t in psList.Children)
@@ -149,6 +158,8 @@ namespace Concept
             }
         }
 
+        /*! \brief updates the scores of all the players
+        */
         public void UpdateAllScores()
         {
             foreach (TextBox t in psList.Children)
@@ -164,6 +175,8 @@ namespace Concept
             }
         }
 
+        /*! \brief creates the textboxes for the player scores
+        */
         public void CreatePlayerScores()
         {
             psList.Orientation = Orientation.Vertical;
@@ -187,6 +200,8 @@ namespace Concept
             }
         }
 
+        /*! \brief cycles to the next player for their turn
+        */
         public void CyclePlayers()
         {
             try
@@ -212,6 +227,8 @@ namespace Concept
             curtime = 30;
         }
 
+        /*! \brief creates the players gotten from the playernames at the start of the game
+        */
         public void CreatePlayers()
         {
             for (int i = 0; i < playerNames.Count; i++)
@@ -221,6 +238,8 @@ namespace Concept
             }
         }
 
+        /*! \brief decides how big the grid is supposed to be according to the amount of players
+        */
         public void AssignGrid()
         {
             switch (players.Count)
@@ -242,6 +261,8 @@ namespace Concept
             }
         }
 
+        /*! \brief creates the grid
+        */
         public void CreateGrid(int size) // give even number
         {
             if (size % 2 != 0) // failsafe for idiots <3
@@ -262,6 +283,8 @@ namespace Concept
             RandomOrder(); // give the wrappanel a random order
         }
 
+        /*! \brief sets the theme for the cards
+        */
         public void SetTheme()
         {
             foreach (Card c in wp.Children)
@@ -274,6 +297,8 @@ namespace Concept
             }
         }
 
+        /*! \brief swaps the theme for the cards to the other theme
+        */
         public void SwapTheme()
         {
 
@@ -298,6 +323,8 @@ namespace Concept
             }
         }
 
+        /*! \brief puts the cards in a random order
+        */
         public void RandomOrder() // function that empties and fills the wrappanel for randomisation
         {
             List<Card> cl = new List<Card>(); // list to hold the cards in temporary
@@ -316,6 +343,8 @@ namespace Concept
             }
         }
 
+        /*! \brief gives you a chance to get a powerup everytime you get a pair
+        */
         public void PowerupLottery()
         {
             Random random = new Random();
@@ -345,6 +374,8 @@ namespace Concept
             }
         }
 
+        /*! \brief  add points to current player and run powerlottery
+        */
         public void AddPoints(int points)
         {
             cp.score += points;
@@ -352,6 +383,8 @@ namespace Concept
             Console.WriteLine(cp.name + " " + cp.score);
         }
 
+        /*! \brief build the pause menu
+        */
         private void BuildPauseMenu()
         {
             pmenu.Orientation = Orientation.Vertical;
@@ -383,6 +416,8 @@ namespace Concept
             pmenu.Children.Add(Quitb);
         }
 
+        /*! \brief load the game from a save file
+        */
         public void LoadGame(string s)
         {
             string playerstr = ""; // empty players string
@@ -448,6 +483,8 @@ namespace Concept
             }
         }
 
+        /*! \brief save's the game to a .sav file
+        */
         public void SaveGame() // touch this code and i will strangle you in your sleep :)
         {
             string OneStringToSaveThemAll = ""; // the motherload string that holds all the other strings
@@ -494,6 +531,8 @@ namespace Concept
             }
         }
 
+        /*! \brief checks if the game is over and shows a textbox with the scores and a button to go back and save at the end
+        */
         public void CheckGameOver()
         {
             bool finished = true;
@@ -536,6 +575,8 @@ namespace Concept
             }
         }
 
+        /*! \brief sends the highscores to be put into the highscores save file to the highscore class
+        */
         private void SendHighScores()
         {
             List<string[,]> collective = new List<string[,]>(); // collection of 2 dimentional arrays of player names and scores
@@ -551,6 +592,8 @@ namespace Concept
         }
 
         private static Random rng = new Random(); // initialize RNJezus
+        /*! \brief powerup that is easier to have here that shuffles the cards
+        */
         public static void ShuffleCards<T>(IList<T> list) // function that shuffles cards
         {
             int n = list.Count; // size of list
@@ -564,12 +607,16 @@ namespace Concept
             }
         }
 
+        /*! \brief eventlistner for the resume button
+        */
         private void Resumeb_Click(object sender, RoutedEventArgs e) // click event/function [works more like event]
         {
             pmenu.Visibility = Visibility.Collapsed;
             paused = false;
         }
 
+        /*! \brief eventlistner for end of game button
+        */
         private void EndGame_Click(object sender, RoutedEventArgs e)
         {
             SendHighScores();
@@ -577,17 +624,23 @@ namespace Concept
             Application.Current.Shutdown(); // shut the old running application down
         }
 
+        /*! \brief eventlistner for the save game button(spelled wrong)
+        */
         private void SafeGameb_Click(object sender, RoutedEventArgs e) // click event/function [works more like event]
         {
             SaveGame();
         }
 
+        /*! \brief eventlistner for the quit button
+        */
         private void Quitb_Click(object sender, RoutedEventArgs e) // click event/function [works more like event]
         {
             System.Diagnostics.Process.Start(Application.ResourceAssembly.Location); // restarts the application bringing you back to the home screen
             Application.Current.Shutdown(); // shut the old running application down
         }
 
+        /*! \brief eventlistner for the powerup button
+        */
         private void PowerButton_Click(object sender, RoutedEventArgs e) // click event/function [works more like event]
         {
             if (cp.powerup != null)
@@ -596,6 +649,8 @@ namespace Concept
             }
         }
 
+        /*! \brief eventlistner for when you press escape
+        */
         private void Window_KeyDown(object sender, KeyEventArgs e) // key down function, is any key
         {
             if (e.Key == Key.Escape) // check key
@@ -613,7 +668,9 @@ namespace Concept
                 }
             }
         }
-    
+
+        /*! \brief eventlistner for the dispatchtimer
+        */
         private void timer_Tick(object sender, EventArgs e)
         {
             if (!paused)

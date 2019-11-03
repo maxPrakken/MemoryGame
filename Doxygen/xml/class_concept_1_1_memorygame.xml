@@ -1,0 +1,365 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+  <compounddef id="class_concept_1_1_memorygame" kind="class" language="C++" prot="public">
+    <compoundname>Concept::Memorygame</compoundname>
+    <basecompoundref prot="private" virt="non-virtual">Page</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_concept_1_1_memorygame_1a2256e1238914ca8e3fea22451728b67e" prot="private" static="no" mutable="no">
+        <type>DispatcherTimer</type>
+        <definition>DispatcherTimer Concept::Memorygame::dt</definition>
+        <argsstring></argsstring>
+        <name>dt</name>
+        <initializer>= new DispatcherTimer()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>timer responsible for time limit </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/desktop/MemoryGame/Concept/Memorygame.xaml.cs" line="20" column="25" bodyfile="E:/desktop/MemoryGame/Concept/Memorygame.xaml.cs" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_concept_1_1_memorygame_1a793da4e7c5375b3e7ad8e167bdc049ca" prot="private" static="no" mutable="no">
+        <type>WrapPanel</type>
+        <definition>WrapPanel Concept::Memorygame::wp</definition>
+        <argsstring></argsstring>
+        <name>wp</name>
+        <initializer>= new WrapPanel()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>initialise wrap panel </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/desktop/MemoryGame/Concept/Memorygame.xaml.cs" line="22" column="19" bodyfile="E:/desktop/MemoryGame/Concept/Memorygame.xaml.cs" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_concept_1_1_memorygame_1af66d16012fb1394bcab406cefdaffe2f" prot="private" static="no" mutable="no">
+        <type>Canvas</type>
+        <definition>Canvas Concept::Memorygame::DP</definition>
+        <argsstring></argsstring>
+        <name>DP</name>
+        <initializer>= new Canvas()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>main panel </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/desktop/MemoryGame/Concept/Memorygame.xaml.cs" line="24" column="16" bodyfile="E:/desktop/MemoryGame/Concept/Memorygame.xaml.cs" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_concept_1_1_memorygame_1a111654aeca537220cbc8d2e7d31c1de8" prot="private" static="no" mutable="no">
+        <type>StackPanel</type>
+        <definition>StackPanel Concept::Memorygame::psList</definition>
+        <argsstring></argsstring>
+        <name>psList</name>
+        <initializer>= new StackPanel()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>list of score textboxes </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/desktop/MemoryGame/Concept/Memorygame.xaml.cs" line="26" column="20" bodyfile="E:/desktop/MemoryGame/Concept/Memorygame.xaml.cs" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_concept_1_1_memorygame_1a07087704d5de152153d2e8e291d52761" prot="private" static="no" mutable="no">
+        <type>TextBox</type>
+        <definition>TextBox Concept::Memorygame::cpp</definition>
+        <argsstring></argsstring>
+        <name>cpp</name>
+        <initializer>= new TextBox()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>current player display </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/desktop/MemoryGame/Concept/Memorygame.xaml.cs" line="27" column="17" bodyfile="E:/desktop/MemoryGame/Concept/Memorygame.xaml.cs" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_concept_1_1_memorygame_1a4f2d3d5411dd5d1c7516d41bba8f0a36" prot="private" static="no" mutable="no">
+        <type>StackPanel</type>
+        <definition>StackPanel Concept::Memorygame::pmenu</definition>
+        <argsstring></argsstring>
+        <name>pmenu</name>
+        <initializer>= new StackPanel()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>pause menu panel </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/desktop/MemoryGame/Concept/Memorygame.xaml.cs" line="29" column="20" bodyfile="E:/desktop/MemoryGame/Concept/Memorygame.xaml.cs" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_concept_1_1_memorygame_1abba75a9a863ffe64b5a448403b60e6b1" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Concept::Memorygame::paused</definition>
+        <argsstring></argsstring>
+        <name>paused</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>to check if game should be frozen </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/desktop/MemoryGame/Concept/Memorygame.xaml.cs" line="30" column="14" bodyfile="E:/desktop/MemoryGame/Concept/Memorygame.xaml.cs" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_concept_1_1_memorygame_1a39afc20a777de6d8dbfedc38c1b01875" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Concept::Memorygame::turntime</definition>
+        <argsstring></argsstring>
+        <name>turntime</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>lowest point of timer </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/desktop/MemoryGame/Concept/Memorygame.xaml.cs" line="32" column="13" bodyfile="E:/desktop/MemoryGame/Concept/Memorygame.xaml.cs" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_concept_1_1_memorygame_1ae7eb6ff0325e8b178bdd094407ac403b" prot="private" static="no" mutable="no">
+        <type>public int</type>
+        <definition>public int Concept::Memorygame::curtime</definition>
+        <argsstring></argsstring>
+        <name>curtime</name>
+        <initializer>= 30</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>reset point of timer </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/desktop/MemoryGame/Concept/Memorygame.xaml.cs" line="33" column="20" bodyfile="E:/desktop/MemoryGame/Concept/Memorygame.xaml.cs" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_concept_1_1_memorygame_1a8fb04b6fa1e1941f7de16a687858a0f4" prot="private" static="no" mutable="no">
+        <type>TextBox</type>
+        <definition>TextBox Concept::Memorygame::turnCountdown</definition>
+        <argsstring></argsstring>
+        <name>turnCountdown</name>
+        <initializer>= new TextBox()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>displays timer </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/desktop/MemoryGame/Concept/Memorygame.xaml.cs" line="34" column="17" bodyfile="E:/desktop/MemoryGame/Concept/Memorygame.xaml.cs" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_concept_1_1_memorygame_1a6905e51f480be2482352e59c09c28b35" prot="private" static="no" mutable="no">
+        <type>List&lt; string &gt;</type>
+        <definition>List&lt;string&gt; Concept::Memorygame::playerNames</definition>
+        <argsstring></argsstring>
+        <name>playerNames</name>
+        <initializer>= new List&lt;string&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>player names </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/desktop/MemoryGame/Concept/Memorygame.xaml.cs" line="36" column="14" bodyfile="E:/desktop/MemoryGame/Concept/Memorygame.xaml.cs" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_concept_1_1_memorygame_1a514bf3575ed6757be70bc44ca256010d" prot="private" static="no" mutable="no">
+        <type>List&lt; <ref refid="class_concept_1_1_card" kindref="compound">Card</ref> &gt;</type>
+        <definition>List&lt;Card&gt; Concept::Memorygame::pc</definition>
+        <argsstring></argsstring>
+        <name>pc</name>
+        <initializer>= new List&lt;<ref refid="class_concept_1_1_card" kindref="compound">Card</ref>&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/desktop/MemoryGame/Concept/Memorygame.xaml.cs" line="37" column="14" bodyfile="E:/desktop/MemoryGame/Concept/Memorygame.xaml.cs" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_concept_1_1_memorygame_1a8810bfd078564f91bed6061e71fbb911" prot="private" static="no" mutable="no">
+        <type>List&lt; <ref refid="class_concept_1_1_player" kindref="compound">Player</ref> &gt;</type>
+        <definition>List&lt;Player&gt; Concept::Memorygame::players</definition>
+        <argsstring></argsstring>
+        <name>players</name>
+        <initializer>= new List&lt;<ref refid="class_concept_1_1_player" kindref="compound">Player</ref>&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/desktop/MemoryGame/Concept/Memorygame.xaml.cs" line="38" column="14" bodyfile="E:/desktop/MemoryGame/Concept/Memorygame.xaml.cs" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_concept_1_1_memorygame_1a80e233dc484e3620ed86c783e984a969" prot="private" static="no" mutable="no">
+        <type>Button</type>
+        <definition>Button Concept::Memorygame::powerbutton</definition>
+        <argsstring></argsstring>
+        <name>powerbutton</name>
+        <initializer>= new Button()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>activated current players powerup </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/desktop/MemoryGame/Concept/Memorygame.xaml.cs" line="40" column="16" bodyfile="E:/desktop/MemoryGame/Concept/Memorygame.xaml.cs" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_concept_1_1_memorygame_1a248c33d5059a128fd52241793d395647" prot="private" static="no" mutable="no">
+        <type>private <ref refid="class_concept_1_1_memorygame" kindref="compound">Memorygame</ref></type>
+        <definition>private Memorygame Concept::Memorygame::_mg</definition>
+        <argsstring></argsstring>
+        <name>_mg</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>local instance of MemoryGame class </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/desktop/MemoryGame/Concept/Memorygame.xaml.cs" line="42" column="28" bodyfile="E:/desktop/MemoryGame/Concept/Memorygame.xaml.cs" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_concept_1_1_memorygame_1a75a8e1fcdf5240c2fb0d568d5766bb65" prot="private" static="no" mutable="no">
+        <type>private int</type>
+        <definition>private int Concept::Memorygame::powerupDropChance</definition>
+        <argsstring></argsstring>
+        <name>powerupDropChance</name>
+        <initializer>= 20</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>procentage change to get a powerup after score a point </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/desktop/MemoryGame/Concept/Memorygame.xaml.cs" line="44" column="21" bodyfile="E:/desktop/MemoryGame/Concept/Memorygame.xaml.cs" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_concept_1_1_memorygame_1a1bd0a6b5ff764d5e53aae93d720895df" prot="private" static="no" mutable="no">
+        <type><ref refid="class_concept_1_1_player" kindref="compound">Player</ref></type>
+        <definition>Player Concept::Memorygame::cp</definition>
+        <argsstring></argsstring>
+        <name>cp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>current player </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/desktop/MemoryGame/Concept/Memorygame.xaml.cs" line="46" column="16" bodyfile="E:/desktop/MemoryGame/Concept/Memorygame.xaml.cs" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_concept_1_1_memorygame_1a519ee00b3360ec6ace73ec49da90af30" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Concept::Memorygame::currentCP</definition>
+        <argsstring></argsstring>
+        <name>currentCP</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/desktop/MemoryGame/Concept/Memorygame.xaml.cs" line="47" column="13" bodyfile="E:/desktop/MemoryGame/Concept/Memorygame.xaml.cs" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_concept_1_1_memorygame_1a56fa6b250bb6ccd9ed014ff7b6e41e89" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>public</type>
+        <definition>public Concept::Memorygame::Memorygame</definition>
+        <argsstring>()</argsstring>
+        <name>Memorygame</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>overridden constructor for getting player names</para>
+<para>overridden constructor</para>
+<para>updates the score of the current player in the corresponding textbox</para>
+<para>updates the scores of all the players</para>
+<para>creates the textboxes for the player scores</para>
+<para>cycles to the next player for their turn</para>
+<para>creates the players gotten from the playernames at the start of the game</para>
+<para>decides how big the grid is supposed to be according to the amount of players</para>
+<para>creates the grid</para>
+<para>sets the theme for the cards</para>
+<para>swaps the theme for the cards to the other theme</para>
+<para>puts the cards in a random order</para>
+<para>gives you a chance to get a powerup everytime you get a pair</para>
+<para>add points to current player and run powerlottery</para>
+<para>build the pause menu</para>
+<para>load the game from a save file</para>
+<para>save&apos;s the game to a .sav file</para>
+<para>checks if the game is over and shows a textbox with the scores and a button to go back and save at the end</para>
+<para>sends the highscores to be put into the highscores save file to the highscore class</para>
+<para>powerup that is easier to have here that shuffles the cards</para>
+<para>eventlistner for the resume button</para>
+<para>eventlistner for end of game button</para>
+<para>eventlistner for the save game button(spelled wrong)</para>
+<para>eventlistner for the quit button</para>
+<para>eventlistner for the powerup button</para>
+<para>eventlistner for when you press escape</para>
+<para>eventlistner for the dispatchtimer</para>
+        </inbodydescription>
+        <location file="E:/desktop/MemoryGame/Concept/Memorygame.xaml.cs" line="49" column="16" bodyfile="E:/desktop/MemoryGame/Concept/Memorygame.xaml.cs" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>MemoryGame class, the main class of the game. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>Concept::Memorygame</label>
+        <link refid="class_concept_1_1_memorygame"/>
+        <childnode refid="2" relation="private-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Page</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>Concept::Memorygame</label>
+        <link refid="class_concept_1_1_memorygame"/>
+        <childnode refid="2" relation="private-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Page</label>
+      </node>
+    </collaborationgraph>
+    <location file="E:/desktop/MemoryGame/Concept/Memorygame.xaml.cs" line="19" column="1" bodyfile="E:/desktop/MemoryGame/Concept/Memorygame.xaml.cs" bodystart="18" bodyend="686"/>
+    <listofallmembers>
+      <member refid="class_concept_1_1_memorygame_1a248c33d5059a128fd52241793d395647" prot="private" virt="non-virtual"><scope>Concept::Memorygame</scope><name>_mg</name></member>
+      <member refid="class_concept_1_1_memorygame_1a1bd0a6b5ff764d5e53aae93d720895df" prot="private" virt="non-virtual"><scope>Concept::Memorygame</scope><name>cp</name></member>
+      <member refid="class_concept_1_1_memorygame_1a07087704d5de152153d2e8e291d52761" prot="private" virt="non-virtual"><scope>Concept::Memorygame</scope><name>cpp</name></member>
+      <member refid="class_concept_1_1_memorygame_1a519ee00b3360ec6ace73ec49da90af30" prot="private" virt="non-virtual"><scope>Concept::Memorygame</scope><name>currentCP</name></member>
+      <member refid="class_concept_1_1_memorygame_1ae7eb6ff0325e8b178bdd094407ac403b" prot="private" virt="non-virtual"><scope>Concept::Memorygame</scope><name>curtime</name></member>
+      <member refid="class_concept_1_1_memorygame_1af66d16012fb1394bcab406cefdaffe2f" prot="private" virt="non-virtual"><scope>Concept::Memorygame</scope><name>DP</name></member>
+      <member refid="class_concept_1_1_memorygame_1a2256e1238914ca8e3fea22451728b67e" prot="private" virt="non-virtual"><scope>Concept::Memorygame</scope><name>dt</name></member>
+      <member refid="class_concept_1_1_memorygame_1a56fa6b250bb6ccd9ed014ff7b6e41e89" prot="private" virt="non-virtual"><scope>Concept::Memorygame</scope><name>Memorygame</name></member>
+      <member refid="class_concept_1_1_memorygame_1abba75a9a863ffe64b5a448403b60e6b1" prot="private" virt="non-virtual"><scope>Concept::Memorygame</scope><name>paused</name></member>
+      <member refid="class_concept_1_1_memorygame_1a514bf3575ed6757be70bc44ca256010d" prot="private" virt="non-virtual"><scope>Concept::Memorygame</scope><name>pc</name></member>
+      <member refid="class_concept_1_1_memorygame_1a6905e51f480be2482352e59c09c28b35" prot="private" virt="non-virtual"><scope>Concept::Memorygame</scope><name>playerNames</name></member>
+      <member refid="class_concept_1_1_memorygame_1a8810bfd078564f91bed6061e71fbb911" prot="private" virt="non-virtual"><scope>Concept::Memorygame</scope><name>players</name></member>
+      <member refid="class_concept_1_1_memorygame_1a4f2d3d5411dd5d1c7516d41bba8f0a36" prot="private" virt="non-virtual"><scope>Concept::Memorygame</scope><name>pmenu</name></member>
+      <member refid="class_concept_1_1_memorygame_1a80e233dc484e3620ed86c783e984a969" prot="private" virt="non-virtual"><scope>Concept::Memorygame</scope><name>powerbutton</name></member>
+      <member refid="class_concept_1_1_memorygame_1a75a8e1fcdf5240c2fb0d568d5766bb65" prot="private" virt="non-virtual"><scope>Concept::Memorygame</scope><name>powerupDropChance</name></member>
+      <member refid="class_concept_1_1_memorygame_1a111654aeca537220cbc8d2e7d31c1de8" prot="private" virt="non-virtual"><scope>Concept::Memorygame</scope><name>psList</name></member>
+      <member refid="class_concept_1_1_memorygame_1a8fb04b6fa1e1941f7de16a687858a0f4" prot="private" virt="non-virtual"><scope>Concept::Memorygame</scope><name>turnCountdown</name></member>
+      <member refid="class_concept_1_1_memorygame_1a39afc20a777de6d8dbfedc38c1b01875" prot="private" virt="non-virtual"><scope>Concept::Memorygame</scope><name>turntime</name></member>
+      <member refid="class_concept_1_1_memorygame_1a793da4e7c5375b3e7ad8e167bdc049ca" prot="private" virt="non-virtual"><scope>Concept::Memorygame</scope><name>wp</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

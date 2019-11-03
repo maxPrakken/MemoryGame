@@ -1,0 +1,232 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+  <compounddef id="class_concept_1_1_card" kind="class" language="C#" prot="public">
+    <compoundname>Concept::Card</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Button</basecompoundref>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_concept_1_1_card_1aabe3242ff4b6831d5dc4a2ffce0e051a" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Concept.Card.type</definition>
+        <argsstring></argsstring>
+        <name>type</name>
+        <initializer>= -1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>default type, -1 so you know when somethings wrong </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/desktop/MemoryGame/Concept/Card.cs" line="16" column="20" bodyfile="E:/desktop/MemoryGame/Concept/Card.cs" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_concept_1_1_card_1aad30ca990a90d80c43ebed03919ef3e2" prot="public" static="no" mutable="no">
+        <type>ImageBrush</type>
+        <definition>ImageBrush Concept.Card.backgroundimg</definition>
+        <argsstring></argsstring>
+        <name>backgroundimg</name>
+        <initializer>= new ImageBrush()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>front facing image of card </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/desktop/MemoryGame/Concept/Card.cs" line="21" column="27" bodyfile="E:/desktop/MemoryGame/Concept/Card.cs" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_concept_1_1_card_1ad5487df40c5a304a97bdd3aa02b2bbeb" prot="public" static="no" mutable="no">
+        <type>ImageBrush</type>
+        <definition>ImageBrush Concept.Card.defaultBG</definition>
+        <argsstring></argsstring>
+        <name>defaultBG</name>
+        <initializer>= new ImageBrush()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>rear facing image of card </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/desktop/MemoryGame/Concept/Card.cs" line="22" column="27" bodyfile="E:/desktop/MemoryGame/Concept/Card.cs" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_concept_1_1_card_1a51debfd5ce38479da3be0a9978d7133c" prot="private" static="no" mutable="no">
+        <type>List&lt; <ref refid="class_concept_1_1_card" kindref="compound">Card</ref> &gt;</type>
+        <definition>List&lt;Card&gt; Concept.Card.pc</definition>
+        <argsstring></argsstring>
+        <name>pc</name>
+        <initializer>= new List&lt;<ref refid="class_concept_1_1_card" kindref="compound">Card</ref>&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>private list of all cards </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/desktop/MemoryGame/Concept/Card.cs" line="17" column="22" bodyfile="E:/desktop/MemoryGame/Concept/Card.cs" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_concept_1_1_card_1aa6670593cd4a8bab01f9e1a283e0dbd9" prot="private" static="no" mutable="no">
+        <type>WrapPanel</type>
+        <definition>WrapPanel Concept.Card.wp</definition>
+        <argsstring></argsstring>
+        <name>wp</name>
+        <initializer>= new WrapPanel()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>instance of wrappanel from memorygame </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/desktop/MemoryGame/Concept/Card.cs" line="18" column="19" bodyfile="E:/desktop/MemoryGame/Concept/Card.cs" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_concept_1_1_card_1a307ff578bacf587e91f147b50907cad7" prot="private" static="no" mutable="no">
+        <type><ref refid="class_concept_1_1_memorygame" kindref="compound">Memorygame</ref></type>
+        <definition>Memorygame Concept.Card._mg</definition>
+        <argsstring></argsstring>
+        <name>_mg</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>instance of memorygame </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/desktop/MemoryGame/Concept/Card.cs" line="19" column="20" bodyfile="E:/desktop/MemoryGame/Concept/Card.cs" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_concept_1_1_card_1a3328f22792ba2eced932f697ba5ad9ec" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Concept.Card.Card</definition>
+        <argsstring>()</argsstring>
+        <name>Card</name>
+        <briefdescription>
+<para>default constructor </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/desktop/MemoryGame/Concept/Card.cs" line="26" column="16" bodyfile="E:/desktop/MemoryGame/Concept/Card.cs" bodystart="26" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="class_concept_1_1_card_1a1e33acaaf03df457d90758816c4cab0a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Concept.Card.Card</definition>
+        <argsstring>(int type, double width, int size, WrapPanel wp, List&lt; Card &gt; pc, Memorygame _mg)</argsstring>
+        <name>Card</name>
+        <param>
+          <type>int</type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>width</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>WrapPanel</type>
+          <declname>wp</declname>
+        </param>
+        <param>
+          <type>List&lt; <ref refid="class_concept_1_1_card" kindref="compound">Card</ref> &gt;</type>
+          <declname>pc</declname>
+        </param>
+        <param>
+          <type><ref refid="class_concept_1_1_memorygame" kindref="compound">Memorygame</ref></type>
+          <declname>_mg</declname>
+        </param>
+        <briefdescription>
+<para>override constructor that takes arguements: type, width, size, wrappanel, list of cards, and memorygame instance </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/desktop/MemoryGame/Concept/Card.cs" line="37" column="16" bodyfile="E:/desktop/MemoryGame/Concept/Card.cs" bodystart="37" bodyend="49"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_concept_1_1_card_1a275250073bc3dcdbd71c17c18ce536b6" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Concept.Card.Button1_Click</definition>
+        <argsstring>(object sender, RoutedEventArgs e)</argsstring>
+        <name>Button1_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>RoutedEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>eventlistener for when card is clicked </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/desktop/MemoryGame/Concept/Card.cs" line="53" column="22" bodyfile="E:/desktop/MemoryGame/Concept/Card.cs" bodystart="53" bodyend="63"/>
+      </memberdef>
+      <memberdef kind="function" id="class_concept_1_1_card_1a5f6c7249ef128d761ba0573811e14326" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Concept.Card.FlipManager</definition>
+        <argsstring>()</argsstring>
+        <name>FlipManager</name>
+        <briefdescription>
+<para>makes sure the card flips and waits with flipping back </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/desktop/MemoryGame/Concept/Card.cs" line="67" column="22" bodyfile="E:/desktop/MemoryGame/Concept/Card.cs" bodystart="67" bodyend="123"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para><ref refid="class_concept_1_1_card" kindref="compound">Card</ref> class derived from button. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>Button</label>
+      </node>
+      <node id="1">
+        <label>Concept.Card</label>
+        <link refid="class_concept_1_1_card"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>Button</label>
+      </node>
+      <node id="1">
+        <label>Concept.Card</label>
+        <link refid="class_concept_1_1_card"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="E:/desktop/MemoryGame/Concept/Card.cs" line="15" column="1" bodyfile="E:/desktop/MemoryGame/Concept/Card.cs" bodystart="14" bodyend="124"/>
+    <listofallmembers>
+      <member refid="class_concept_1_1_card_1a307ff578bacf587e91f147b50907cad7" prot="private" virt="non-virtual"><scope>Concept::Card</scope><name>_mg</name></member>
+      <member refid="class_concept_1_1_card_1aad30ca990a90d80c43ebed03919ef3e2" prot="public" virt="non-virtual"><scope>Concept::Card</scope><name>backgroundimg</name></member>
+      <member refid="class_concept_1_1_card_1a275250073bc3dcdbd71c17c18ce536b6" prot="private" virt="non-virtual"><scope>Concept::Card</scope><name>Button1_Click</name></member>
+      <member refid="class_concept_1_1_card_1a3328f22792ba2eced932f697ba5ad9ec" prot="public" virt="non-virtual"><scope>Concept::Card</scope><name>Card</name></member>
+      <member refid="class_concept_1_1_card_1a1e33acaaf03df457d90758816c4cab0a" prot="public" virt="non-virtual"><scope>Concept::Card</scope><name>Card</name></member>
+      <member refid="class_concept_1_1_card_1ad5487df40c5a304a97bdd3aa02b2bbeb" prot="public" virt="non-virtual"><scope>Concept::Card</scope><name>defaultBG</name></member>
+      <member refid="class_concept_1_1_card_1a5f6c7249ef128d761ba0573811e14326" prot="private" virt="non-virtual"><scope>Concept::Card</scope><name>FlipManager</name></member>
+      <member refid="class_concept_1_1_card_1a51debfd5ce38479da3be0a9978d7133c" prot="private" virt="non-virtual"><scope>Concept::Card</scope><name>pc</name></member>
+      <member refid="class_concept_1_1_card_1aabe3242ff4b6831d5dc4a2ffce0e051a" prot="public" virt="non-virtual"><scope>Concept::Card</scope><name>type</name></member>
+      <member refid="class_concept_1_1_card_1aa6670593cd4a8bab01f9e1a283e0dbd9" prot="private" virt="non-virtual"><scope>Concept::Card</scope><name>wp</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

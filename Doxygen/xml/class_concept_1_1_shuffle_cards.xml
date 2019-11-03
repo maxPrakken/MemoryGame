@@ -1,0 +1,111 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+  <compounddef id="class_concept_1_1_shuffle_cards" kind="class" language="C#" prot="public">
+    <compoundname>Concept::ShuffleCards</compoundname>
+    <basecompoundref refid="class_concept_1_1_powerup" prot="public" virt="non-virtual">Concept.Powerup</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_concept_1_1_shuffle_cards_1a9501b95ce7ec47568d0ee53733023aab" prot="private" static="no" mutable="no">
+        <type><ref refid="class_concept_1_1_memorygame" kindref="compound">Memorygame</ref></type>
+        <definition>Memorygame Concept.ShuffleCards._mg</definition>
+        <argsstring></argsstring>
+        <name>_mg</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>instance of the MemoryGame </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/desktop/MemoryGame/Concept/Powerup.cs" line="120" column="20" bodyfile="E:/desktop/MemoryGame/Concept/Powerup.cs" bodystart="120" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_concept_1_1_shuffle_cards_1a9958ad2fb22bdac688c5cd33c682b2e9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Concept.ShuffleCards.ShuffleCards</definition>
+        <argsstring>()</argsstring>
+        <name>ShuffleCards</name>
+        <briefdescription>
+<para>base constructor </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/desktop/MemoryGame/Concept/Powerup.cs" line="124" column="16" bodyfile="E:/desktop/MemoryGame/Concept/Powerup.cs" bodystart="124" bodyend="127"/>
+      </memberdef>
+      <memberdef kind="function" id="class_concept_1_1_shuffle_cards_1a2eadfa414a76f876e88354e55cdd4e24" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Concept.ShuffleCards.ShuffleCards</definition>
+        <argsstring>(Memorygame _mg)</argsstring>
+        <name>ShuffleCards</name>
+        <param>
+          <type><ref refid="class_concept_1_1_memorygame" kindref="compound">Memorygame</ref></type>
+          <declname>_mg</declname>
+        </param>
+        <briefdescription>
+<para>override constructor that takes MemoryGame instance </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/desktop/MemoryGame/Concept/Powerup.cs" line="131" column="16" bodyfile="E:/desktop/MemoryGame/Concept/Powerup.cs" bodystart="131" bodyend="135"/>
+      </memberdef>
+      <memberdef kind="function" id="class_concept_1_1_shuffle_cards_1a877803459c7fc1da0e27c5eda88e2b19" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override void</type>
+        <definition>override void Concept.ShuffleCards.Use</definition>
+        <argsstring>()</argsstring>
+        <name>Use</name>
+        <reimplements refid="class_concept_1_1_powerup_1afb6120b1c6d2bcd706380d7df4154c2f">Use</reimplements>
+        <briefdescription>
+<para>override Use method that uses Randomorder method from MemoryGame instance </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/desktop/MemoryGame/Concept/Powerup.cs" line="139" column="30" bodyfile="E:/desktop/MemoryGame/Concept/Powerup.cs" bodystart="139" bodyend="143"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>shufflecards derived class of powerup </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>Powerup</label>
+        <link refid="class_concept_1_1_powerup"/>
+      </node>
+      <node id="1">
+        <label>Concept.ShuffleCards</label>
+        <link refid="class_concept_1_1_shuffle_cards"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>Powerup</label>
+        <link refid="class_concept_1_1_powerup"/>
+      </node>
+      <node id="1">
+        <label>Concept.ShuffleCards</label>
+        <link refid="class_concept_1_1_shuffle_cards"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="E:/desktop/MemoryGame/Concept/Powerup.cs" line="119" column="1" bodyfile="E:/desktop/MemoryGame/Concept/Powerup.cs" bodystart="118" bodyend="144"/>
+    <listofallmembers>
+      <member refid="class_concept_1_1_shuffle_cards_1a9501b95ce7ec47568d0ee53733023aab" prot="private" virt="non-virtual"><scope>Concept::ShuffleCards</scope><name>_mg</name></member>
+      <member refid="class_concept_1_1_powerup_1a09511f34dba18665bdb9705dc337270c" prot="public" virt="non-virtual"><scope>Concept::ShuffleCards</scope><name>isused</name></member>
+      <member refid="class_concept_1_1_powerup_1a2256056c5573d1b355166dcf55fff49a" prot="public" virt="non-virtual"><scope>Concept::ShuffleCards</scope><name>name</name></member>
+      <member refid="class_concept_1_1_powerup_1adf87fc00cd1eeea6704b207e789ede4f" prot="public" virt="non-virtual"><scope>Concept::ShuffleCards</scope><name>Powerup</name></member>
+      <member refid="class_concept_1_1_shuffle_cards_1a9958ad2fb22bdac688c5cd33c682b2e9" prot="public" virt="non-virtual"><scope>Concept::ShuffleCards</scope><name>ShuffleCards</name></member>
+      <member refid="class_concept_1_1_shuffle_cards_1a2eadfa414a76f876e88354e55cdd4e24" prot="public" virt="non-virtual"><scope>Concept::ShuffleCards</scope><name>ShuffleCards</name></member>
+      <member refid="class_concept_1_1_shuffle_cards_1a877803459c7fc1da0e27c5eda88e2b19" prot="public" virt="virtual"><scope>Concept::ShuffleCards</scope><name>Use</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

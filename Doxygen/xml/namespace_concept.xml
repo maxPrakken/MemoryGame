@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+  <compounddef id="namespace_concept" kind="namespace" language="C++">
+    <compoundname>Concept</compoundname>
+    <innerclass refid="class_concept_1_1_app" prot="public">Concept::App</innerclass>
+    <innerclass refid="class_concept_1_1_card" prot="public">Concept::Card</innerclass>
+    <innerclass refid="class_concept_1_1_highscores" prot="public">Concept::Highscores</innerclass>
+    <innerclass refid="class_concept_1_1_main_window" prot="public">Concept::MainWindow</innerclass>
+    <innerclass refid="class_concept_1_1_memorygame" prot="public">Concept::Memorygame</innerclass>
+    <innerclass refid="class_concept_1_1_player" prot="public">Concept::Player</innerclass>
+    <innerclass refid="class_concept_1_1_powerup" prot="public">Concept::Powerup</innerclass>
+    <innerclass refid="class_concept_1_1_score_swap" prot="public">Concept::ScoreSwap</innerclass>
+    <innerclass refid="class_concept_1_1_selectplayers" prot="public">Concept::Selectplayers</innerclass>
+    <innerclass refid="class_concept_1_1_shuffle_cards" prot="public">Concept::ShuffleCards</innerclass>
+    <innerclass refid="class_concept_1_1_theme_swap" prot="public">Concept::ThemeSwap</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="E:/desktop/MemoryGame/Concept/App.xaml.cs" line="10" column="1"/>
+  </compounddef>
+</doxygen>

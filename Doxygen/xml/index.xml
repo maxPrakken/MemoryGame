@@ -1,0 +1,151 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.8.16">
+  <compound refid="class_concept_1_1_app" kind="class"><name>Concept::App</name>
+  </compound>
+  <compound refid="class_concept_1_1_card" kind="class"><name>Concept::Card</name>
+    <member refid="class_concept_1_1_card_1aabe3242ff4b6831d5dc4a2ffce0e051a" kind="variable"><name>type</name></member>
+    <member refid="class_concept_1_1_card_1aad30ca990a90d80c43ebed03919ef3e2" kind="variable"><name>backgroundimg</name></member>
+    <member refid="class_concept_1_1_card_1ad5487df40c5a304a97bdd3aa02b2bbeb" kind="variable"><name>defaultBG</name></member>
+    <member refid="class_concept_1_1_card_1a51debfd5ce38479da3be0a9978d7133c" kind="variable"><name>pc</name></member>
+    <member refid="class_concept_1_1_card_1aa6670593cd4a8bab01f9e1a283e0dbd9" kind="variable"><name>wp</name></member>
+    <member refid="class_concept_1_1_card_1a307ff578bacf587e91f147b50907cad7" kind="variable"><name>_mg</name></member>
+    <member refid="class_concept_1_1_card_1a3328f22792ba2eced932f697ba5ad9ec" kind="function"><name>Card</name></member>
+    <member refid="class_concept_1_1_card_1a1e33acaaf03df457d90758816c4cab0a" kind="function"><name>Card</name></member>
+    <member refid="class_concept_1_1_card_1a275250073bc3dcdbd71c17c18ce536b6" kind="function"><name>Button1_Click</name></member>
+    <member refid="class_concept_1_1_card_1a5f6c7249ef128d761ba0573811e14326" kind="function"><name>FlipManager</name></member>
+  </compound>
+  <compound refid="class_concept_1_1_highscores" kind="class"><name>Concept::Highscores</name>
+    <member refid="class_concept_1_1_highscores_1a38ecb586218bfc2103ee4badbcc7e765" kind="variable"><name>HighScores</name></member>
+    <member refid="class_concept_1_1_highscores_1a85060ac4adb8f8bccdc5e62ab8e1011b" kind="function"><name>Highscores</name></member>
+    <member refid="class_concept_1_1_highscores_1a2ee4e0a809232f571561addcc3245e0f" kind="function"><name>InjectScores</name></member>
+    <member refid="class_concept_1_1_highscores_1a6988797a7d214acdac596365fdd6e87a" kind="function"><name>ShowHighScores</name></member>
+    <member refid="class_concept_1_1_highscores_1a0dab52b315b83bf8ca4d704f285fb5f5" kind="function"><name>CheckHighScores</name></member>
+  </compound>
+  <compound refid="class_concept_1_1_main_window" kind="class"><name>Concept::MainWindow</name>
+    <member refid="class_concept_1_1_main_window_1ac1d26325ae71b2f575465f5c5ea3078c" kind="variable"><name>playerList</name></member>
+    <member refid="class_concept_1_1_main_window_1ac08a7a63f43da2be1ad47c171cd5c716" kind="function"><name>OnClosed</name></member>
+    <member refid="class_concept_1_1_main_window_1ae1222b7b5d750627c7b94249a5d8de47" kind="function"><name>MainWindow</name></member>
+    <member refid="class_concept_1_1_main_window_1a5a06615bd3e02aa7d17ef588931b07c5" kind="function"><name>Button_start_Click</name></member>
+    <member refid="class_concept_1_1_main_window_1abe15b9063f8fb1f4911b5e7a3ffd7459" kind="function"><name>Button_resume_Click</name></member>
+    <member refid="class_concept_1_1_main_window_1a5dc94082217dd209480cee23daf420d7" kind="function"><name>Button_highscore_Click</name></member>
+    <member refid="class_concept_1_1_main_window_1a8096c06879a862cdee079b0bc685a51f" kind="function"><name>Button_quit_Click</name></member>
+    <member refid="class_concept_1_1_main_window_1a4a352ea06725cc13596e067f96dd12dd" kind="function"><name>Button_1speler_Click</name></member>
+    <member refid="class_concept_1_1_main_window_1a768cbae6127fb13e72d74dc2c297b59b" kind="function"><name>Button_2speler_Click</name></member>
+    <member refid="class_concept_1_1_main_window_1a209f050e7dab92b1ee505cf891907f75" kind="function"><name>Button_3speler_Click</name></member>
+    <member refid="class_concept_1_1_main_window_1a6bd804d13f6630a2f77a0811f4c43052" kind="function"><name>Button_4speler_Click</name></member>
+    <member refid="class_concept_1_1_main_window_1aff52b2fd2eaa4f9c5db54b6793823628" kind="function"><name>BackButton_Click</name></member>
+    <member refid="class_concept_1_1_main_window_1ab73e299090ef04241fe4252af30f3e7b" kind="function"><name>ButtonGameStart_Click</name></member>
+    <member refid="class_concept_1_1_main_window_1a03b06fcfd054e16eea05e7d3a67a8401" kind="function"><name>TextBoxPlace</name></member>
+  </compound>
+  <compound refid="class_concept_1_1_memorygame" kind="class"><name>Concept::Memorygame</name>
+    <member refid="class_concept_1_1_memorygame_1a2256e1238914ca8e3fea22451728b67e" kind="variable"><name>dt</name></member>
+    <member refid="class_concept_1_1_memorygame_1a793da4e7c5375b3e7ad8e167bdc049ca" kind="variable"><name>wp</name></member>
+    <member refid="class_concept_1_1_memorygame_1af66d16012fb1394bcab406cefdaffe2f" kind="variable"><name>DP</name></member>
+    <member refid="class_concept_1_1_memorygame_1a111654aeca537220cbc8d2e7d31c1de8" kind="variable"><name>psList</name></member>
+    <member refid="class_concept_1_1_memorygame_1a07087704d5de152153d2e8e291d52761" kind="variable"><name>cpp</name></member>
+    <member refid="class_concept_1_1_memorygame_1a4f2d3d5411dd5d1c7516d41bba8f0a36" kind="variable"><name>pmenu</name></member>
+    <member refid="class_concept_1_1_memorygame_1abba75a9a863ffe64b5a448403b60e6b1" kind="variable"><name>paused</name></member>
+    <member refid="class_concept_1_1_memorygame_1a39afc20a777de6d8dbfedc38c1b01875" kind="variable"><name>turntime</name></member>
+    <member refid="class_concept_1_1_memorygame_1ae7eb6ff0325e8b178bdd094407ac403b" kind="variable"><name>curtime</name></member>
+    <member refid="class_concept_1_1_memorygame_1a8fb04b6fa1e1941f7de16a687858a0f4" kind="variable"><name>turnCountdown</name></member>
+    <member refid="class_concept_1_1_memorygame_1a6905e51f480be2482352e59c09c28b35" kind="variable"><name>playerNames</name></member>
+    <member refid="class_concept_1_1_memorygame_1a514bf3575ed6757be70bc44ca256010d" kind="variable"><name>pc</name></member>
+    <member refid="class_concept_1_1_memorygame_1a8810bfd078564f91bed6061e71fbb911" kind="variable"><name>players</name></member>
+    <member refid="class_concept_1_1_memorygame_1a80e233dc484e3620ed86c783e984a969" kind="variable"><name>powerbutton</name></member>
+    <member refid="class_concept_1_1_memorygame_1a248c33d5059a128fd52241793d395647" kind="variable"><name>_mg</name></member>
+    <member refid="class_concept_1_1_memorygame_1a75a8e1fcdf5240c2fb0d568d5766bb65" kind="variable"><name>powerupDropChance</name></member>
+    <member refid="class_concept_1_1_memorygame_1a1bd0a6b5ff764d5e53aae93d720895df" kind="variable"><name>cp</name></member>
+    <member refid="class_concept_1_1_memorygame_1a519ee00b3360ec6ace73ec49da90af30" kind="variable"><name>currentCP</name></member>
+    <member refid="class_concept_1_1_memorygame_1a56fa6b250bb6ccd9ed014ff7b6e41e89" kind="function"><name>Memorygame</name></member>
+  </compound>
+  <compound refid="class_concept_1_1_player" kind="class"><name>Concept::Player</name>
+    <member refid="class_concept_1_1_player_1a11452fcedbd92e525c74c56f5361d9a7" kind="variable"><name>name</name></member>
+    <member refid="class_concept_1_1_player_1a3d305d7d11a6c4e95b0056c1cb289fe2" kind="variable"><name>score</name></member>
+    <member refid="class_concept_1_1_player_1a3ec9f39329d7401ba91fa39fb8f2d78e" kind="variable"><name>powerup</name></member>
+    <member refid="class_concept_1_1_player_1accd4771e949802f3278b4a7c19fce360" kind="variable"><name>creditPU</name></member>
+    <member refid="class_concept_1_1_player_1aa851bb42bbc5931eb74066c216cfb2c3" kind="function"><name>Player</name></member>
+    <member refid="class_concept_1_1_player_1ac5df8f55c6d21512368c43154d0fb56b" kind="function"><name>Player</name></member>
+  </compound>
+  <compound refid="class_concept_1_1_powerup" kind="class"><name>Concept::Powerup</name>
+    <member refid="class_concept_1_1_powerup_1a09511f34dba18665bdb9705dc337270c" kind="variable"><name>isused</name></member>
+    <member refid="class_concept_1_1_powerup_1a2256056c5573d1b355166dcf55fff49a" kind="variable"><name>name</name></member>
+    <member refid="class_concept_1_1_powerup_1adf87fc00cd1eeea6704b207e789ede4f" kind="function"><name>Powerup</name></member>
+    <member refid="class_concept_1_1_powerup_1afb6120b1c6d2bcd706380d7df4154c2f" kind="function"><name>Use</name></member>
+  </compound>
+  <compound refid="class_concept_1_1_score_swap" kind="class"><name>Concept::ScoreSwap</name>
+    <member refid="class_concept_1_1_score_swap_1a064073c51e5ff93cf9a9ec32c9a10fdb" kind="variable"><name>pl</name></member>
+    <member refid="class_concept_1_1_score_swap_1ae32d8128a26c8f055c31de62bcbae1b7" kind="variable"><name>rng</name></member>
+    <member refid="class_concept_1_1_score_swap_1acc437246a5a0cee777d71b8d30683eb3" kind="function"><name>ScoreSwap</name></member>
+    <member refid="class_concept_1_1_score_swap_1a9fe57c70ece0478aef31df9e702cf79c" kind="function"><name>ScoreSwap</name></member>
+    <member refid="class_concept_1_1_score_swap_1a7a92ce6966c720aecdc11ea6521b2ff1" kind="function"><name>Use</name></member>
+    <member refid="class_concept_1_1_score_swap_1a33cf7ccf54038a6d115152f5b3eb4038" kind="function"><name>ShuffleScore</name></member>
+  </compound>
+  <compound refid="class_concept_1_1_selectplayers" kind="class"><name>Concept::Selectplayers</name>
+    <member refid="class_concept_1_1_selectplayers_1ad803e97f98bff13e90c6c96c1e93cb13" kind="variable"><name>cv1</name></member>
+    <member refid="class_concept_1_1_selectplayers_1a593be485c78221fbc72bad314b4744c1" kind="variable"><name>sp</name></member>
+    <member refid="class_concept_1_1_selectplayers_1abe523979054c6510c58fee749fbd219d" kind="function"><name>Selectplayers</name></member>
+    <member refid="class_concept_1_1_selectplayers_1ae90d666d48cc9684209efd92a34d7b21" kind="function"><name>Button_1speler_Click</name></member>
+    <member refid="class_concept_1_1_selectplayers_1a8c070e14fd790ed9f22bcac5a7a13c77" kind="function"><name>Button_2speler_Click</name></member>
+    <member refid="class_concept_1_1_selectplayers_1a154c377ff1ac90ae047842754ec61271" kind="function"><name>Button_3speler_Click</name></member>
+    <member refid="class_concept_1_1_selectplayers_1afc8811a976182de82a52e701a22b8642" kind="function"><name>Button_4speler_Click</name></member>
+    <member refid="class_concept_1_1_selectplayers_1a8dde17ee44e569bd89889a5e819b0e3c" kind="function"><name>TextBoxPlace</name></member>
+  </compound>
+  <compound refid="class_concept_1_1_shuffle_cards" kind="class"><name>Concept::ShuffleCards</name>
+    <member refid="class_concept_1_1_shuffle_cards_1a9501b95ce7ec47568d0ee53733023aab" kind="variable"><name>_mg</name></member>
+    <member refid="class_concept_1_1_shuffle_cards_1a9958ad2fb22bdac688c5cd33c682b2e9" kind="function"><name>ShuffleCards</name></member>
+    <member refid="class_concept_1_1_shuffle_cards_1a2eadfa414a76f876e88354e55cdd4e24" kind="function"><name>ShuffleCards</name></member>
+    <member refid="class_concept_1_1_shuffle_cards_1a877803459c7fc1da0e27c5eda88e2b19" kind="function"><name>Use</name></member>
+  </compound>
+  <compound refid="class_concept_1_1_theme_swap" kind="class"><name>Concept::ThemeSwap</name>
+    <member refid="class_concept_1_1_theme_swap_1aaa6ea2c8bcbcff2328563a3969dedfdd" kind="variable"><name>_mg</name></member>
+    <member refid="class_concept_1_1_theme_swap_1a367e02b0980f341919643ae143b07b6e" kind="function"><name>ThemeSwap</name></member>
+    <member refid="class_concept_1_1_theme_swap_1a48ca313ee39da834638edc3e189b3905" kind="function"><name>ThemeSwap</name></member>
+    <member refid="class_concept_1_1_theme_swap_1a710cac61296e69202585c4bd6227d890" kind="function"><name>Use</name></member>
+  </compound>
+  <compound refid="namespace_concept" kind="namespace"><name>Concept</name>
+  </compound>
+  <compound refid="namespace_system" kind="namespace"><name>System</name>
+  </compound>
+  <compound refid="namespace_system_1_1_collections_1_1_generic" kind="namespace"><name>System::Collections::Generic</name>
+  </compound>
+  <compound refid="namespace_system_1_1_i_o" kind="namespace"><name>System::IO</name>
+  </compound>
+  <compound refid="namespace_system_1_1_linq" kind="namespace"><name>System::Linq</name>
+  </compound>
+  <compound refid="namespace_system_1_1_text" kind="namespace"><name>System::Text</name>
+  </compound>
+  <compound refid="namespace_system_1_1_threading_1_1_tasks" kind="namespace"><name>System::Threading::Tasks</name>
+  </compound>
+  <compound refid="namespace_system_1_1_windows" kind="namespace"><name>System::Windows</name>
+  </compound>
+  <compound refid="namespace_system_1_1_windows_1_1_controls" kind="namespace"><name>System::Windows::Controls</name>
+  </compound>
+  <compound refid="namespace_system_1_1_windows_1_1_input" kind="namespace"><name>System::Windows::Input</name>
+  </compound>
+  <compound refid="namespace_system_1_1_windows_1_1_media" kind="namespace"><name>System::Windows::Media</name>
+  </compound>
+  <compound refid="namespace_system_1_1_windows_1_1_media_1_1_imaging" kind="namespace"><name>System::Windows::Media::Imaging</name>
+  </compound>
+  <compound refid="_app_8xaml_8cs" kind="file"><name>App.xaml.cs</name>
+  </compound>
+  <compound refid="_card_8cs" kind="file"><name>Card.cs</name>
+  </compound>
+  <compound refid="_highscores_8cs" kind="file"><name>Highscores.cs</name>
+  </compound>
+  <compound refid="_main_window_8xaml_8cs" kind="file"><name>MainWindow.xaml.cs</name>
+  </compound>
+  <compound refid="_memorygame_8xaml_8cs" kind="file"><name>Memorygame.xaml.cs</name>
+  </compound>
+  <compound refid="_player_8cs" kind="file"><name>Player.cs</name>
+  </compound>
+  <compound refid="_powerup_8cs" kind="file"><name>Powerup.cs</name>
+  </compound>
+  <compound refid="_selectplayers_8xaml_8cs" kind="file"><name>Selectplayers.xaml.cs</name>
+  </compound>
+  <compound refid="dir_70ff4c4aab862f2c10bc14f67fdebc13" kind="dir"><name>E:/desktop/MemoryGame/Concept</name>
+  </compound>
+  <compound refid="dir_634d989582191fdfe017f28ecbfd9152" kind="dir"><name>E:/desktop</name>
+  </compound>
+  <compound refid="dir_bd92f241ac3508c252a7cdb68ccab8d8" kind="dir"><name>E:/desktop/MemoryGame</name>
+  </compound>
+</doxygenindex>

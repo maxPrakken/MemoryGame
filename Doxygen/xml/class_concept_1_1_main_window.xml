@@ -1,0 +1,339 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+  <compounddef id="class_concept_1_1_main_window" kind="class" language="C++" prot="public">
+    <compoundname>Concept::MainWindow</compoundname>
+    <basecompoundref prot="private" virt="non-virtual">Window</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_concept_1_1_main_window_1ac1d26325ae71b2f575465f5c5ea3078c" prot="private" static="no" mutable="no">
+        <type>List&lt; string &gt;</type>
+        <definition>List&lt;string&gt; Concept::MainWindow::playerList</definition>
+        <argsstring></argsstring>
+        <name>playerList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>list of players </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/desktop/MemoryGame/Concept/MainWindow.xaml.cs" line="25" column="14" bodyfile="E:/desktop/MemoryGame/Concept/MainWindow.xaml.cs" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_concept_1_1_main_window_1ac08a7a63f43da2be1ad47c171cd5c716" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>protected override void</type>
+        <definition>protected override void Concept::MainWindow::OnClosed</definition>
+        <argsstring>(EventArgs e)</argsstring>
+        <name>OnClosed</name>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>eventlistner for if window closes </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/desktop/MemoryGame/Concept/MainWindow.xaml.cs" line="29" column="33" bodyfile="E:/desktop/MemoryGame/Concept/MainWindow.xaml.cs" bodystart="29" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="function" id="class_concept_1_1_main_window_1ae1222b7b5d750627c7b94249a5d8de47" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>public</type>
+        <definition>public Concept::MainWindow::MainWindow</definition>
+        <argsstring>()</argsstring>
+        <name>MainWindow</name>
+        <briefdescription>
+<para>default constructor </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/desktop/MemoryGame/Concept/MainWindow.xaml.cs" line="38" column="16" bodyfile="E:/desktop/MemoryGame/Concept/MainWindow.xaml.cs" bodystart="38" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="class_concept_1_1_main_window_1a5a06615bd3e02aa7d17ef588931b07c5" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>private void</type>
+        <definition>private void Concept::MainWindow::Button_start_Click</definition>
+        <argsstring>(object sender, RoutedEventArgs e)</argsstring>
+        <name>Button_start_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>RoutedEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>eventlistner for start button </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/desktop/MemoryGame/Concept/MainWindow.xaml.cs" line="49" column="22" bodyfile="E:/desktop/MemoryGame/Concept/MainWindow.xaml.cs" bodystart="49" bodyend="61"/>
+      </memberdef>
+      <memberdef kind="function" id="class_concept_1_1_main_window_1abe15b9063f8fb1f4911b5e7a3ffd7459" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>private void</type>
+        <definition>private void Concept::MainWindow::Button_resume_Click</definition>
+        <argsstring>(object sender, RoutedEventArgs e)</argsstring>
+        <name>Button_resume_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>RoutedEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>eventlistner for resume button </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/desktop/MemoryGame/Concept/MainWindow.xaml.cs" line="65" column="22" bodyfile="E:/desktop/MemoryGame/Concept/MainWindow.xaml.cs" bodystart="65" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="function" id="class_concept_1_1_main_window_1a5dc94082217dd209480cee23daf420d7" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>private void</type>
+        <definition>private void Concept::MainWindow::Button_highscore_Click</definition>
+        <argsstring>(object sender, RoutedEventArgs e)</argsstring>
+        <name>Button_highscore_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>RoutedEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>eventlistner for highscore button </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/desktop/MemoryGame/Concept/MainWindow.xaml.cs" line="77" column="22" bodyfile="E:/desktop/MemoryGame/Concept/MainWindow.xaml.cs" bodystart="77" bodyend="80"/>
+      </memberdef>
+      <memberdef kind="function" id="class_concept_1_1_main_window_1a8096c06879a862cdee079b0bc685a51f" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>private void</type>
+        <definition>private void Concept::MainWindow::Button_quit_Click</definition>
+        <argsstring>(object sender, RoutedEventArgs e)</argsstring>
+        <name>Button_quit_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>RoutedEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>eventlistner for quit button </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/desktop/MemoryGame/Concept/MainWindow.xaml.cs" line="84" column="22" bodyfile="E:/desktop/MemoryGame/Concept/MainWindow.xaml.cs" bodystart="84" bodyend="87"/>
+      </memberdef>
+      <memberdef kind="function" id="class_concept_1_1_main_window_1a4a352ea06725cc13596e067f96dd12dd" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>private void</type>
+        <definition>private void Concept::MainWindow::Button_1speler_Click</definition>
+        <argsstring>(object sender, RoutedEventArgs e)</argsstring>
+        <name>Button_1speler_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>RoutedEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>eventlistner for 1 spelers select </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/desktop/MemoryGame/Concept/MainWindow.xaml.cs" line="91" column="22" bodyfile="E:/desktop/MemoryGame/Concept/MainWindow.xaml.cs" bodystart="91" bodyend="94"/>
+      </memberdef>
+      <memberdef kind="function" id="class_concept_1_1_main_window_1a768cbae6127fb13e72d74dc2c297b59b" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>private void</type>
+        <definition>private void Concept::MainWindow::Button_2speler_Click</definition>
+        <argsstring>(object sender, RoutedEventArgs e)</argsstring>
+        <name>Button_2speler_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>RoutedEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>eventlistner for 2 spelers select </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/desktop/MemoryGame/Concept/MainWindow.xaml.cs" line="98" column="22" bodyfile="E:/desktop/MemoryGame/Concept/MainWindow.xaml.cs" bodystart="98" bodyend="101"/>
+      </memberdef>
+      <memberdef kind="function" id="class_concept_1_1_main_window_1a209f050e7dab92b1ee505cf891907f75" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>private void</type>
+        <definition>private void Concept::MainWindow::Button_3speler_Click</definition>
+        <argsstring>(object sender, RoutedEventArgs e)</argsstring>
+        <name>Button_3speler_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>RoutedEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>eventlistner for 3 spelers select </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/desktop/MemoryGame/Concept/MainWindow.xaml.cs" line="105" column="22" bodyfile="E:/desktop/MemoryGame/Concept/MainWindow.xaml.cs" bodystart="105" bodyend="108"/>
+      </memberdef>
+      <memberdef kind="function" id="class_concept_1_1_main_window_1a6bd804d13f6630a2f77a0811f4c43052" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>private void</type>
+        <definition>private void Concept::MainWindow::Button_4speler_Click</definition>
+        <argsstring>(object sender, RoutedEventArgs e)</argsstring>
+        <name>Button_4speler_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>RoutedEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>eventlistner for 4 spelers select </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/desktop/MemoryGame/Concept/MainWindow.xaml.cs" line="112" column="22" bodyfile="E:/desktop/MemoryGame/Concept/MainWindow.xaml.cs" bodystart="112" bodyend="115"/>
+      </memberdef>
+      <memberdef kind="function" id="class_concept_1_1_main_window_1aff52b2fd2eaa4f9c5db54b6793823628" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>private void</type>
+        <definition>private void Concept::MainWindow::BackButton_Click</definition>
+        <argsstring>(object sender, RoutedEventArgs e)</argsstring>
+        <name>BackButton_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>RoutedEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>eventlistner for back button </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/desktop/MemoryGame/Concept/MainWindow.xaml.cs" line="119" column="22" bodyfile="E:/desktop/MemoryGame/Concept/MainWindow.xaml.cs" bodystart="119" bodyend="138"/>
+      </memberdef>
+      <memberdef kind="function" id="class_concept_1_1_main_window_1ab73e299090ef04241fe4252af30f3e7b" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>private void</type>
+        <definition>private void Concept::MainWindow::ButtonGameStart_Click</definition>
+        <argsstring>(object sender, RoutedEventArgs e)</argsstring>
+        <name>ButtonGameStart_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>RoutedEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>eventlistner for final game start button </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/desktop/MemoryGame/Concept/MainWindow.xaml.cs" line="143" column="22" bodyfile="E:/desktop/MemoryGame/Concept/MainWindow.xaml.cs" bodystart="143" bodyend="182"/>
+      </memberdef>
+      <memberdef kind="function" id="class_concept_1_1_main_window_1a03b06fcfd054e16eea05e7d3a67a8401" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>public void</type>
+        <definition>public void Concept::MainWindow::TextBoxPlace</definition>
+        <argsstring>(int count)</argsstring>
+        <name>TextBoxPlace</name>
+        <param>
+          <type>int</type>
+          <declname>count</declname>
+        </param>
+        <briefdescription>
+<para>places the textboxes to input your name </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/desktop/MemoryGame/Concept/MainWindow.xaml.cs" line="186" column="21" bodyfile="E:/desktop/MemoryGame/Concept/MainWindow.xaml.cs" bodystart="186" bodyend="238"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>mainwindow class, first window you see and the menu </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>Window</label>
+      </node>
+      <node id="1">
+        <label>Concept::MainWindow</label>
+        <link refid="class_concept_1_1_main_window"/>
+        <childnode refid="2" relation="private-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>Window</label>
+      </node>
+      <node id="1">
+        <label>Concept::MainWindow</label>
+        <link refid="class_concept_1_1_main_window"/>
+        <childnode refid="2" relation="private-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="E:/desktop/MemoryGame/Concept/MainWindow.xaml.cs" line="24" column="1" bodyfile="E:/desktop/MemoryGame/Concept/MainWindow.xaml.cs" bodystart="23" bodyend="240"/>
+    <listofallmembers>
+      <member refid="class_concept_1_1_main_window_1aff52b2fd2eaa4f9c5db54b6793823628" prot="private" virt="non-virtual"><scope>Concept::MainWindow</scope><name>BackButton_Click</name></member>
+      <member refid="class_concept_1_1_main_window_1a4a352ea06725cc13596e067f96dd12dd" prot="private" virt="non-virtual"><scope>Concept::MainWindow</scope><name>Button_1speler_Click</name></member>
+      <member refid="class_concept_1_1_main_window_1a768cbae6127fb13e72d74dc2c297b59b" prot="private" virt="non-virtual"><scope>Concept::MainWindow</scope><name>Button_2speler_Click</name></member>
+      <member refid="class_concept_1_1_main_window_1a209f050e7dab92b1ee505cf891907f75" prot="private" virt="non-virtual"><scope>Concept::MainWindow</scope><name>Button_3speler_Click</name></member>
+      <member refid="class_concept_1_1_main_window_1a6bd804d13f6630a2f77a0811f4c43052" prot="private" virt="non-virtual"><scope>Concept::MainWindow</scope><name>Button_4speler_Click</name></member>
+      <member refid="class_concept_1_1_main_window_1a5dc94082217dd209480cee23daf420d7" prot="private" virt="non-virtual"><scope>Concept::MainWindow</scope><name>Button_highscore_Click</name></member>
+      <member refid="class_concept_1_1_main_window_1a8096c06879a862cdee079b0bc685a51f" prot="private" virt="non-virtual"><scope>Concept::MainWindow</scope><name>Button_quit_Click</name></member>
+      <member refid="class_concept_1_1_main_window_1abe15b9063f8fb1f4911b5e7a3ffd7459" prot="private" virt="non-virtual"><scope>Concept::MainWindow</scope><name>Button_resume_Click</name></member>
+      <member refid="class_concept_1_1_main_window_1a5a06615bd3e02aa7d17ef588931b07c5" prot="private" virt="non-virtual"><scope>Concept::MainWindow</scope><name>Button_start_Click</name></member>
+      <member refid="class_concept_1_1_main_window_1ab73e299090ef04241fe4252af30f3e7b" prot="private" virt="non-virtual"><scope>Concept::MainWindow</scope><name>ButtonGameStart_Click</name></member>
+      <member refid="class_concept_1_1_main_window_1ae1222b7b5d750627c7b94249a5d8de47" prot="private" virt="non-virtual"><scope>Concept::MainWindow</scope><name>MainWindow</name></member>
+      <member refid="class_concept_1_1_main_window_1ac08a7a63f43da2be1ad47c171cd5c716" prot="private" virt="non-virtual"><scope>Concept::MainWindow</scope><name>OnClosed</name></member>
+      <member refid="class_concept_1_1_main_window_1ac1d26325ae71b2f575465f5c5ea3078c" prot="private" virt="non-virtual"><scope>Concept::MainWindow</scope><name>playerList</name></member>
+      <member refid="class_concept_1_1_main_window_1a03b06fcfd054e16eea05e7d3a67a8401" prot="private" virt="non-virtual"><scope>Concept::MainWindow</scope><name>TextBoxPlace</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

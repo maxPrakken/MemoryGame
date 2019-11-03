@@ -1,0 +1,127 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+  <compounddef id="class_concept_1_1_player" kind="class" language="C#" prot="public">
+    <compoundname>Concept::Player</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_concept_1_1_player_1a11452fcedbd92e525c74c56f5361d9a7" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string Concept.Player.name</definition>
+        <argsstring></argsstring>
+        <name>name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>player name </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/desktop/MemoryGame/Concept/Player.cs" line="13" column="23" bodyfile="E:/desktop/MemoryGame/Concept/Player.cs" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_concept_1_1_player_1a3d305d7d11a6c4e95b0056c1cb289fe2" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Concept.Player.score</definition>
+        <argsstring></argsstring>
+        <name>score</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>player score </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/desktop/MemoryGame/Concept/Player.cs" line="14" column="20" bodyfile="E:/desktop/MemoryGame/Concept/Player.cs" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_concept_1_1_player_1a3ec9f39329d7401ba91fa39fb8f2d78e" prot="public" static="no" mutable="no">
+        <type><ref refid="class_concept_1_1_powerup" kindref="compound">Powerup</ref></type>
+        <definition>Powerup Concept.Player.powerup</definition>
+        <argsstring></argsstring>
+        <name>powerup</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>player powerup </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/desktop/MemoryGame/Concept/Player.cs" line="15" column="24" bodyfile="E:/desktop/MemoryGame/Concept/Player.cs" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_concept_1_1_player_1accd4771e949802f3278b4a7c19fce360" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string Concept.Player.creditPU</definition>
+        <argsstring></argsstring>
+        <name>creditPU</name>
+        <initializer>= &quot;&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>credit to powerup, used in loading due to dependency </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/desktop/MemoryGame/Concept/Player.cs" line="16" column="23" bodyfile="E:/desktop/MemoryGame/Concept/Player.cs" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_concept_1_1_player_1aa851bb42bbc5931eb74066c216cfb2c3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Concept.Player.Player</definition>
+        <argsstring>()</argsstring>
+        <name>Player</name>
+        <briefdescription>
+<para>default constructor </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/desktop/MemoryGame/Concept/Player.cs" line="20" column="16" bodyfile="E:/desktop/MemoryGame/Concept/Player.cs" bodystart="20" bodyend="23"/>
+      </memberdef>
+      <memberdef kind="function" id="class_concept_1_1_player_1ac5df8f55c6d21512368c43154d0fb56b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Concept.Player.Player</definition>
+        <argsstring>(string name)</argsstring>
+        <name>Player</name>
+        <param>
+          <type>string</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>overridden constructor that takes name </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/desktop/MemoryGame/Concept/Player.cs" line="27" column="16" bodyfile="E:/desktop/MemoryGame/Concept/Player.cs" bodystart="27" bodyend="30"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>player class </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>Concept.Powerup</label>
+        <link refid="class_concept_1_1_powerup"/>
+      </node>
+      <node id="1">
+        <label>Concept.Player</label>
+        <link refid="class_concept_1_1_player"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>powerup</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="E:/desktop/MemoryGame/Concept/Player.cs" line="12" column="1" bodyfile="E:/desktop/MemoryGame/Concept/Player.cs" bodystart="11" bodyend="31"/>
+    <listofallmembers>
+      <member refid="class_concept_1_1_player_1accd4771e949802f3278b4a7c19fce360" prot="public" virt="non-virtual"><scope>Concept::Player</scope><name>creditPU</name></member>
+      <member refid="class_concept_1_1_player_1a11452fcedbd92e525c74c56f5361d9a7" prot="public" virt="non-virtual"><scope>Concept::Player</scope><name>name</name></member>
+      <member refid="class_concept_1_1_player_1aa851bb42bbc5931eb74066c216cfb2c3" prot="public" virt="non-virtual"><scope>Concept::Player</scope><name>Player</name></member>
+      <member refid="class_concept_1_1_player_1ac5df8f55c6d21512368c43154d0fb56b" prot="public" virt="non-virtual"><scope>Concept::Player</scope><name>Player</name></member>
+      <member refid="class_concept_1_1_player_1a3ec9f39329d7401ba91fa39fb8f2d78e" prot="public" virt="non-virtual"><scope>Concept::Player</scope><name>powerup</name></member>
+      <member refid="class_concept_1_1_player_1a3d305d7d11a6c4e95b0056c1cb289fe2" prot="public" virt="non-virtual"><scope>Concept::Player</scope><name>score</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

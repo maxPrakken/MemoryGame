@@ -9,17 +9,21 @@ using System.Windows.Media.Imaging;
 
 namespace Concept
 {
-    public partial class Card : Button // card class, card is a button
+    /*! \brief Card class derived from button
+       */
+    public partial class Card : Button 
     {
-        public int type = -1; // default type, -1 so you know when somethings wrong
-        private List<Card> pc = new List<Card>();
-        WrapPanel wp = new WrapPanel();
-        Memorygame _mg;
+        public int type = -1; /*!< default type, -1 so you know when somethings wrong */
+        private List<Card> pc = new List<Card>(); /*!< private list of all cards */
+        WrapPanel wp = new WrapPanel(); /*!< instance of wrappanel from memorygame */
+        Memorygame _mg; /*!< instance of memorygame */
 
-        public ImageBrush backgroundimg = new ImageBrush();
-        public ImageBrush defaultBG = new ImageBrush();
+        public ImageBrush backgroundimg = new ImageBrush(); /*!< front facing image of card */
+        public ImageBrush defaultBG = new ImageBrush(); /*!< rear facing image of card */
 
-        public Card() // default constructor
+        /*! \brief default constructor
+       */
+        public Card() 
         {
             type = 0; // set default type
             Content = "test"; // set default content
@@ -27,6 +31,9 @@ namespace Concept
             Height = 50; // set default height
             this.Click += Button1_Click; // subscribes the click event to a function
         }
+
+        /*! \brief override constructor that takes arguements: type, width, size, wrappanel, list of cards, and memorygame instance
+       */
         public Card(int type, double width, int size, WrapPanel wp, List<Card> pc, Memorygame _mg) // override constructor [USE THIS ONE]
         {
             defaultBG.ImageSource = new BitmapImage(new Uri("BG.png", UriKind.Relative));
@@ -41,6 +48,8 @@ namespace Concept
             this.Background = defaultBG;
         }
 
+        /*! \brief eventlistener for when card is clicked
+       */
         private void Button1_Click(object sender, RoutedEventArgs e) // click event/function [works more like event]
         {
             this.Background = backgroundimg;
@@ -53,6 +62,8 @@ namespace Concept
             }
         }
 
+        /*! \brief makes sure the card flips and waits with flipping back
+       */
         private void FlipManager()
         {
             if (pc.Count < 2)

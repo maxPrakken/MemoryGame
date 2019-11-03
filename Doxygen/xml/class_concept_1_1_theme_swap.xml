@@ -1,0 +1,111 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+  <compounddef id="class_concept_1_1_theme_swap" kind="class" language="C#" prot="public">
+    <compoundname>Concept::ThemeSwap</compoundname>
+    <basecompoundref refid="class_concept_1_1_powerup" prot="public" virt="non-virtual">Concept.Powerup</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_concept_1_1_theme_swap_1aaa6ea2c8bcbcff2328563a3969dedfdd" prot="private" static="no" mutable="no">
+        <type><ref refid="class_concept_1_1_memorygame" kindref="compound">Memorygame</ref></type>
+        <definition>Memorygame Concept.ThemeSwap._mg</definition>
+        <argsstring></argsstring>
+        <name>_mg</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>instance of the MemoryGame </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/desktop/MemoryGame/Concept/Powerup.cs" line="89" column="20" bodyfile="E:/desktop/MemoryGame/Concept/Powerup.cs" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_concept_1_1_theme_swap_1a367e02b0980f341919643ae143b07b6e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Concept.ThemeSwap.ThemeSwap</definition>
+        <argsstring>()</argsstring>
+        <name>ThemeSwap</name>
+        <briefdescription>
+<para>base constructor </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/desktop/MemoryGame/Concept/Powerup.cs" line="94" column="16" bodyfile="E:/desktop/MemoryGame/Concept/Powerup.cs" bodystart="94" bodyend="97"/>
+      </memberdef>
+      <memberdef kind="function" id="class_concept_1_1_theme_swap_1a48ca313ee39da834638edc3e189b3905" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Concept.ThemeSwap.ThemeSwap</definition>
+        <argsstring>(Memorygame _mg)</argsstring>
+        <name>ThemeSwap</name>
+        <param>
+          <type><ref refid="class_concept_1_1_memorygame" kindref="compound">Memorygame</ref></type>
+          <declname>_mg</declname>
+        </param>
+        <briefdescription>
+<para>override constructor that takes MemoryGame instance </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/desktop/MemoryGame/Concept/Powerup.cs" line="101" column="16" bodyfile="E:/desktop/MemoryGame/Concept/Powerup.cs" bodystart="101" bodyend="105"/>
+      </memberdef>
+      <memberdef kind="function" id="class_concept_1_1_theme_swap_1a710cac61296e69202585c4bd6227d890" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override void</type>
+        <definition>override void Concept.ThemeSwap.Use</definition>
+        <argsstring>()</argsstring>
+        <name>Use</name>
+        <reimplements refid="class_concept_1_1_powerup_1afb6120b1c6d2bcd706380d7df4154c2f">Use</reimplements>
+        <briefdescription>
+<para>override Use method that uses swaptheme method from MemoryGame instance </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/desktop/MemoryGame/Concept/Powerup.cs" line="109" column="30" bodyfile="E:/desktop/MemoryGame/Concept/Powerup.cs" bodystart="109" bodyend="113"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>themeswap derived class of powerup </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>Concept.ThemeSwap</label>
+        <link refid="class_concept_1_1_theme_swap"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Powerup</label>
+        <link refid="class_concept_1_1_powerup"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>Concept.ThemeSwap</label>
+        <link refid="class_concept_1_1_theme_swap"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Powerup</label>
+        <link refid="class_concept_1_1_powerup"/>
+      </node>
+    </collaborationgraph>
+    <location file="E:/desktop/MemoryGame/Concept/Powerup.cs" line="88" column="1" bodyfile="E:/desktop/MemoryGame/Concept/Powerup.cs" bodystart="87" bodyend="114"/>
+    <listofallmembers>
+      <member refid="class_concept_1_1_theme_swap_1aaa6ea2c8bcbcff2328563a3969dedfdd" prot="private" virt="non-virtual"><scope>Concept::ThemeSwap</scope><name>_mg</name></member>
+      <member refid="class_concept_1_1_powerup_1a09511f34dba18665bdb9705dc337270c" prot="public" virt="non-virtual"><scope>Concept::ThemeSwap</scope><name>isused</name></member>
+      <member refid="class_concept_1_1_powerup_1a2256056c5573d1b355166dcf55fff49a" prot="public" virt="non-virtual"><scope>Concept::ThemeSwap</scope><name>name</name></member>
+      <member refid="class_concept_1_1_powerup_1adf87fc00cd1eeea6704b207e789ede4f" prot="public" virt="non-virtual"><scope>Concept::ThemeSwap</scope><name>Powerup</name></member>
+      <member refid="class_concept_1_1_theme_swap_1a367e02b0980f341919643ae143b07b6e" prot="public" virt="non-virtual"><scope>Concept::ThemeSwap</scope><name>ThemeSwap</name></member>
+      <member refid="class_concept_1_1_theme_swap_1a48ca313ee39da834638edc3e189b3905" prot="public" virt="non-virtual"><scope>Concept::ThemeSwap</scope><name>ThemeSwap</name></member>
+      <member refid="class_concept_1_1_theme_swap_1a710cac61296e69202585c4bd6227d890" prot="public" virt="virtual"><scope>Concept::ThemeSwap</scope><name>Use</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -108,7 +108,6 @@ E:\desktop\MemoryGame\Concept\obj\Debug\Selectplayers.baml
 E:\desktop\MemoryGame\Concept\obj\Debug\Concept.g.resources
 E:\desktop\MemoryGame\Concept\obj\Debug\Concept.Properties.Resources.resources
 E:\desktop\MemoryGame\Concept\obj\Debug\Concept.csproj.GenerateResource.cache
-E:\desktop\MemoryGame\Concept\obj\Debug\Concept.csproj.CoreCompileInputs.cache
 E:\desktop\MemoryGame\Concept\obj\Debug\Concept.exe
 E:\desktop\MemoryGame\Concept\obj\Debug\Concept.pdb
 C:\Users\Ahmed\OneDrive\Documents\HBOICT jaar 1 19-20\MemoryGame\Concept\bin\Debug\2_0.png
