@@ -65,11 +65,12 @@ namespace Concept
 
                 if (pc[0].type == pc[1].type && pc[0] != pc[1])
                 {
+                    _mg.AddPoints(100);
+
                     Task.Delay(2000).ContinueWith(_ =>
                     {
                         this.Dispatcher.Invoke(() =>
                         {
-                            _mg.AddPoints(100);
                             pc[0].IsEnabled = false;
                             pc[1].IsEnabled = false;
                             pc.Clear();
@@ -77,6 +78,7 @@ namespace Concept
                             wp.IsHitTestVisible = true;
 
                             _mg.curtime = 30;
+                            _mg.CheckGameOver();
                         });
                     }
                     );

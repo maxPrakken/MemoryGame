@@ -494,6 +494,62 @@ namespace Concept
             }
         }
 
+        public void CheckGameOver()
+        {
+            bool finished = true;
+
+            foreach(Card c in wp.Children)
+            {
+                if(c.IsEnabled) // if even one card is enabled finished will be false. when all cards are not enabled finished will be true
+                {
+                    finished = false;
+                }
+            }
+
+            if(!finished)
+            {
+                return;
+            }
+            else if(finished)
+            {
+                TextBox scoreShow = new TextBox(); // new textbox that shows player scores
+                scoreShow.Width = 600; // width of the textbox
+                scoreShow.Height = 450; // height of the textbox
+                DP.Children.Add(scoreShow); // add textbox to canvas
+                Canvas.SetZIndex(scoreShow, 1); // set z index so its on the foreground
+                Canvas.SetLeft(scoreShow, 400); // set it vaguely in the middle
+
+                foreach(Player p in players) // loop through players
+                {
+                    scoreShow.Text += p.name + "'s Score: " + p.score + "\n"; // add player name plus score to the textbox
+                }
+
+                Button b = new Button();
+                b.Width = 300;
+                b.Height = 200;
+                b.Content = "Save and Quit game";
+                DP.Children.Add(b);
+                Canvas.SetZIndex(b, 2); // set z index so its on the foreground
+                Canvas.SetLeft(b, 400); // set it vaguely in the middle
+                Canvas.SetTop(b, 300);
+                b.Click += EndGame_Click;
+            }
+        }
+
+        private void SendHighScores()
+        {
+            List<string[,]> collective = new List<string[,]>(); // collection of 2 dimentional arrays of player names and scores
+
+            foreach (Player p in players) // loop through players
+            {
+                string[,] set = new string[,] { {p.name, p.score.ToString()} }; // make 2 dimentional array with name and scores
+                collective.Add(set); // add set to collective
+            }
+
+            Highscores hs = new Highscores(); // make new instance of highscores
+            hs.InjectScores(collective); // inject collective into highscores so highscores can check it against excisting highscores
+        }
+
         private static Random rng = new Random(); // initialize RNJezus
         public static void ShuffleCards<T>(IList<T> list) // function that shuffles cards
         {
@@ -512,6 +568,11 @@ namespace Concept
         {
             pmenu.Visibility = Visibility.Collapsed;
             paused = false;
+        }
+
+        private void EndGame_Click(object sender, RoutedEventArgs e)
+        {
+            SendHighScores();
         }
 
         private void SafeGameb_Click(object sender, RoutedEventArgs e) // click event/function [works more like event]
