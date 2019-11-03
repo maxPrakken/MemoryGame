@@ -573,6 +573,8 @@ namespace Concept
         private void EndGame_Click(object sender, RoutedEventArgs e)
         {
             SendHighScores();
+            System.Diagnostics.Process.Start(Application.ResourceAssembly.Location); // restarts the application bringing you back to the home screen
+            Application.Current.Shutdown(); // shut the old running application down
         }
 
         private void SafeGameb_Click(object sender, RoutedEventArgs e) // click event/function [works more like event]
