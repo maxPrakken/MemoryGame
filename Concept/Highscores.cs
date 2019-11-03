@@ -100,15 +100,14 @@ namespace Concept
                 existingHS.Add(playersDetailed);
             }
 
-             
-
             for(int x = 0; x < existingHS.Count; x++)
             {
                 for(int y = 0; y < top5hs.Length; y++)
                 {
                     if(Convert.ToInt32(existingHS[x][1]) > Convert.ToInt32(top5hs[y, 2]))
                     {
-
+                        //when trying to order these i realised i had gone the compleetly wrong direciton in how i was doing things
+                        //and this was made on the last day so i didnt have time to finish it
                     }
                 }
             }
