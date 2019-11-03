@@ -412,25 +412,38 @@ namespace Concept
             //cards loading
             string[] cardsArray = cardstr.Split('|'); // splits all cards into array
 
-            for(int i = 0; i < cardsArray.Length - 1; i++)
+            for(int i = 0; i < cardsArray.Length - 1; i++) // loops through cards
             { 
-                string[] cardsDetails = cardsArray[i].Split(',');
-                int size = Convert.ToInt32(Math.Sqrt(cardsArray.Length));
-                int type = Convert.ToInt32(cardsDetails[0]);
-                Card c = new Card(type, wp.Width, size, wp, pc, _mg);
+                string[] cardsDetails = cardsArray[i].Split(','); // gets details from cards string into other string array 
+                int size = Convert.ToInt32(Math.Sqrt(cardsArray.Length)); // gets the appropriate size of the cards
+                int type = Convert.ToInt32(cardsDetails[0]); // gets the type from the details string
+                Card c = new Card(type, wp.Width, size, wp, pc, _mg); // makes new card with extracted arguments
 
-                var brush = new ImageBrush();
-                brush.ImageSource = new BitmapImage(new Uri(cardsDetails[1], UriKind.Relative));
-                c.backgroundimg = brush;
+                var brush = new ImageBrush(); // makes new image brush to set background
+                brush.ImageSource = new BitmapImage(new Uri(cardsDetails[1], UriKind.Relative)); // give imagebrush a source
+                c.backgroundimg = brush; // set card background to imagebrush
 
-                wp.Children.Add(c);
+                wp.Children.Add(c); // add child to wrappanel
             }
 
-            foreach(Player p in players)
+            foreach(Player p in players) // loop through players
             {
-                if(p.name == turn)
+                if(p.name == turn) // if player name equals turn
                 {
-                    cp = p;
+                    cp = p; // set current player to player
+                }
+
+                switch(p.creditPU) // check value of creditPU
+                {
+                    case "Score Swap": // if value equals Score Swap
+                        p.powerup = new ScoreSwap(players); // set player powerup to a new scoreswap
+                        break;
+                    case "Theme Swap": // if value equals Theme Swap
+                        p.powerup = new ThemeSwap(this); // set player powerup to a new ThemeSwap
+                        break;
+                    case "Shuffle Cards": // if value equals Shuffle Cards
+                        p.powerup = new ShuffleCards(this); // set player powerup to a new ShuffleCards
+                        break;
                 }
             }
         }
